@@ -97,7 +97,7 @@
           <h2 class="text-2xl font-bold mb-2">Schedule Your Free Consultation</h2>
           <p class="text-gray-600 mb-6">We'll call you within 24 hours to discuss your needs.</p>
           
-          <form class="space-y-4">
+          <form action="mailto:info@truelegacyhomes.com?subject=Free%20Consultation%20Request" method="post" enctype="text/plain" class="space-y-4">
             <div>
               <label for="name" class="block text-sm font-semibold mb-2">Full Name *</label>
               <input 
@@ -117,6 +117,7 @@
                 id="phone" 
                 name="phone" 
                 required
+                pattern="[0-9\-\(\)\s]+"
                 class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tlh-teal focus:border-transparent"
                 placeholder="(555) 123-4567"
               >
@@ -294,7 +295,7 @@
       </div>
       
       <p class="text-center text-gray-600">
-        Not in these areas? <a href="tel:6194501702" class="text-tlh-teal font-semibold hover:underline">Give us a call</a>—we may still be able to help!
+        Not in these areas? <a href="tel:6194501702" class="text-tlh-teal font-semibold hover:underline">Give us a call</a>—we may still be able to help! Or <a href="locations.html" class="text-tlh-teal font-semibold hover:underline">view all our locations</a>.
       </p>
     </div>
   </section>

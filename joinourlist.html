@@ -75,11 +75,13 @@
       
       <!-- Signup Form -->
       <div class="bg-white rounded-2xl shadow-xl p-8 max-w-xl mx-auto">
-        <form class="space-y-4">
+        <form action="https://truelegacyhomes.us12.list-manage.com/subscribe/post?u=8fb80e36c3f769c67994988e71&amp;id=eb811b621b" method="post" class="space-y-4">
+          <input type="hidden" name="SOURCE" value="joinourlist-page">
           <div>
             <label class="block text-sm font-semibold mb-2">First Name *</label>
             <input 
               type="text" 
+              name="FNAME"
               required
               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tlh-teal focus:border-transparent"
               placeholder="Your first name"
@@ -90,6 +92,7 @@
             <label class="block text-sm font-semibold mb-2">Email Address *</label>
             <input 
               type="email" 
+              name="EMAIL"
               required
               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tlh-teal focus:border-transparent"
               placeholder="your.email@example.com"
@@ -100,7 +103,9 @@
             <label class="block text-sm font-semibold mb-2">Phone Number *</label>
             <input 
               type="tel" 
+              name="PHONE"
               required
+              pattern="[0-9\-\(\)\s]+"
               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tlh-teal focus:border-transparent"
               placeholder="(555) 123-4567"
             >
@@ -147,7 +152,7 @@
           </button>
           
           <p class="text-xs text-gray-500 text-center">
-            🔒 We'll send 1-2 emails per week about upcoming sales. Unsubscribe anytime.
+            🔒 We'll send 1-2 emails per week about upcoming sales. Unsubscribe anytime. <a href="shop-sales.html" class="text-tlh-teal hover:underline">Browse current sales</a>.
           </p>
         </form>
       </div>
@@ -246,6 +251,10 @@
       <div class="text-center mt-8">
         <a href="shop-sales.html" class="text-tlh-teal font-semibold hover:underline">
           Browse Current Sales →
+        </a>
+        <span class="mx-2 text-gray-400">|</span>
+        <a href="blog.html" class="text-tlh-teal font-semibold hover:underline">
+          Read Our Blog →
         </a>
       </div>
     </div>
