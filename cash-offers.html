@@ -47,19 +47,47 @@
       <a href="index.html">
         <img src="images/logo-teal.png" alt="True Legacy Homes" class="h-10" style="filter: invert(62%) sepia(50%) saturate(450%) hue-rotate(130deg) brightness(95%);">
       </a>
+      <!-- Desktop Nav -->
       <div class="hidden md:flex space-x-6">
         <a href="estate-sales.html" class="hover:text-tlh-teal">Estate Sales</a>
         <a href="care-placement.html" class="hover:text-tlh-teal">Care Placement</a>
-        <a href="cash-offers.html" class="text-tlh-teal font-semibold">Cash Offers</a>
+        <a href="cash-offers.html" class="hover:text-tlh-teal">Cash Offers</a>
         <a href="about.html" class="hover:text-tlh-teal">About</a>
-        <a href="blog.html" class="hover:text-tlh-teal">Blog</a>
         <a href="contact.html" class="hover:text-tlh-teal">Contact</a>
       </div>
       <a href="tel:6194501702" class="hidden md:flex items-center gap-2 bg-tlh-teal text-white px-4 py-2 rounded-lg hover:bg-tlh-teal-dark">
         <span>📞</span> (619) 450-1702
       </a>
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-tlh-teal" aria-label="Open menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="px-4 py-4 space-y-3">
+        <a href="estate-sales.html" class="block py-2 text-lg hover:text-tlh-teal">Estate Sales</a>
+        <a href="care-placement.html" class="block py-2 text-lg hover:text-tlh-teal">Care Placement</a>
+        <a href="cash-offers.html" class="block py-2 text-lg hover:text-tlh-teal">Cash Offers</a>
+        <a href="about.html" class="block py-2 text-lg hover:text-tlh-teal">About</a>
+        <a href="contact.html" class="block py-2 text-lg hover:text-tlh-teal">Contact</a>
+        <a href="blog.html" class="block py-2 text-gray-500 hover:text-tlh-teal">Blog</a>
+        <a href="locations.html" class="block py-2 text-gray-500 hover:text-tlh-teal">Locations</a>
+        <div class="pt-3 border-t">
+          <a href="tel:6194501702" class="block w-full bg-tlh-teal text-white py-3 rounded-lg font-semibold text-center">
+            📞 Call (619) 450-1702
+          </a>
+        </div>
+      </div>
     </div>
   </nav>
+  <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-tlh-warm to-white py-16 md:py-24">
