@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Moving Resources | True Legacy Homes Blog</title>
+    <meta name="description" content="Expert advice and resources for seniors moving to assisted living, downsizing, and estate planning.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-teal: #38b5ad;
+            --brand-teal-dark: #2a8f89;
+            --text-dark: #1a1a1a;
+            --text-gray: #4a4a4a;
+            --bg-cream: #faf9f7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background: var(--bg-cream);
+        }
+        header {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.5rem;
+            color: var(--brand-teal);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        nav a {
+            color: var(--text-gray);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--brand-teal); }
+        .hero {
+            background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-teal-dark) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .posts-grid {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        .post-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        .post-image {
+            height: 200px;
+            overflow: hidden;
+            background: var(--bg-cream);
+        }
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .post-content {
+            padding: 1.5rem;
+        }
+        .category-badge {
+            display: inline-block;
+            background: rgba(56, 181, 173, 0.1);
+            color: var(--brand-teal);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        .post-content h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .post-content h2 a {
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+        .post-content h2 a:hover {
+            color: var(--brand-teal);
+        }
+        .post-date {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+        .post-excerpt {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        .read-more {
+            color: var(--brand-teal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        footer p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.75rem; }
+            nav { display: none; }
+            .posts-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">True Legacy Homes</a>
+            <nav>
+                <a href="../estate-sales.html">Estate Sales</a>
+                <a href="../about.html">About</a>
+                <a href="index.html">Blog</a>
+                <a href="../contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="hero">
+        <h1>Senior Moving Resources</h1>
+        <p>Expert guidance for navigating assisted living transitions, downsizing, and estate planning.</p>
+    </div>
+    
+    <div class="posts-grid">
+        
+        <article class="post-card">
+            <div class="post-image"><img src="images/122748.jpg" alt="Senior Care Navigation"></div>
+            <div class="post-content">
+                <span class="category-badge">Senior Moving</span>
+                <h2><a href="senior-care-navigation-guide.html">Senior Care Navigation</a></h2>
+                <p class="post-date">September 16, 2025</p>
+                <p class="post-excerpt">.avia-section.av-2187wp2y-830bc5466488c10861fc053b5f3a8c7c{ background-color:#f9f9f9; background-image:unset; } .avia-image-container.av-1pp5svy2-dfaa22fb8c4acb37587adf70463cab2e img.avia_image{ box-s...</p>
+                <a href="senior-care-navigation-guide.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div class="post-image"><img src="images/115878.jpg" alt="The Coming Wave: Boomer housing market and care shift"></div>
+            <div class="post-content">
+                <span class="category-badge">Senior Moving</span>
+                <h2><a href="boomer-housing-market-shift-wave.html">The Coming Wave: Boomer housing market and care shift</a></h2>
+                <p class="post-date">July 28, 2025</p>
+                <p class="post-excerpt">.avia-section.av-2f8g9mqm-adf8d7ee856f59ad337116e769714243{ background-color:#f9f9f9; background-image:unset; } .avia-image-container.av-21zpez6m-35decdde8e15fa214bcd6c4110f32662 img.avia_image{ box-s...</p>
+                <a href="boomer-housing-market-shift-wave.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div class="post-image"><img src="images/106949.jpg" alt="Navigating the Emotional Journey of Senior Care"></div>
+            <div class="post-content">
+                <span class="category-badge">Senior Moving</span>
+                <h2><a href="southern-california-senior-care.html">Navigating the Emotional Journey of Senior Care</a></h2>
+                <p class="post-date">May 29, 2025</p>
+                <p class="post-excerpt">.avia-section.av-23778ta9-e7cbdaecd89ff0b45f6fe7b94ecfc09a{ background-color:#f9f9f9; background-image:unset; } .avia-image-container.av-1w6ckhdt-7d64231555a5310ac42f48d3817153d7 img.avia_image{ box-s...</p>
+                <a href="southern-california-senior-care.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div class="post-image"><img src="images/105976.jpg" alt="Rancho Bernardo Estate Planning"></div>
+            <div class="post-content">
+                <span class="category-badge">Senior Moving</span>
+                <h2><a href="rancho-bernardo-estate-planning.html">Rancho Bernardo Estate Planning</a></h2>
+                <p class="post-date">May 20, 2025</p>
+                <p class="post-excerpt">.avia-section.av-272wdbfr-5986c5d5a4134e6c1e6e88d9add2735a{ background-color:#f9f9f9; background-image:unset; } .avia-image-container.av-1z0sbdlz-0aa6076c050216eb1f0635bb4b3f9313 img.avia_image{ box-s...</p>
+                <a href="rancho-bernardo-estate-planning.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div class="post-image"><img src="images/19326.jpg" alt="100+ Activity Ideas for Seniors in Assisted Living"></div>
+            <div class="post-content">
+                <span class="category-badge">Senior Moving</span>
+                <h2><a href="activities-for-seniors.html">100+ Activity Ideas for Seniors in Assisted Living</a></h2>
+                <p class="post-date">December 02, 2020</p>
+                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-ki6qg3qc-81d2ca3625cb2cf3f3830c6dd69b706c{ padding-bottom:...</p>
+                <a href="activities-for-seniors.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div class="post-image"><img src="images/19193.jpg" alt="Senior Housing, Apartments, and Retirement Homes in Orange County"></div>
+            <div class="post-content">
+                <span class="category-badge">Senior Moving</span>
+                <h2><a href="senior-housing-orange-county.html">Senior Housing, Apartments, and Retirement Homes in Orange County</a></h2>
+                <p class="post-date">November 20, 2020</p>
+                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-khqvarud-9b25c9bb01b66c45115514bfc681ab90{ padding-bottom:...</p>
+                <a href="senior-housing-orange-county.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div class="post-image"><img src="images/17666.jpg" alt="San Diego Senior Living Communities and Retirement Homes"></div>
+            <div class="post-content">
+                <span class="category-badge">Senior Moving</span>
+                <h2><a href="senior-living-san-diego.html">San Diego Senior Living Communities and Retirement Homes</a></h2>
+                <p class="post-date">November 07, 2020</p>
+                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-kh85qb4f-970fb1887cae21ec5fd4ef1afaa0a1dc{ padding-bottom:...</p>
+                <a href="senior-living-san-diego.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div class="post-image"><img src="images/16407.jpg" alt="Differences Between Assisted Living and Nursing Homes"></div>
+            <div class="post-content">
+                <span class="category-badge">Senior Moving</span>
+                <h2><a href="assisted-living-vs-nursing-homes.html">Differences Between Assisted Living and Nursing Homes</a></h2>
+                <p class="post-date">October 23, 2020</p>
+                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-kgmhbdwj-cf837a4bfd71fa754ea8dbf73c7e70ec{ padding-bottom:...</p>
+                <a href="assisted-living-vs-nursing-homes.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div class="post-image"><img src="images/15457.jpg" alt="Continuing Care Retirement Communities (CCRC Definition)"></div>
+            <div class="post-content">
+                <span class="category-badge">Senior Moving</span>
+                <h2><a href="continuing-care-retirement-communities.html">Continuing Care Retirement Communities (CCRC Definition)</a></h2>
+                <p class="post-date">October 15, 2020</p>
+                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-kga6niac-3bdd23ef4139933d014df0fd5b2d296d{ padding-bottom:...</p>
+                <a href="continuing-care-retirement-communities.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div class="post-image"><img src="images/14648.jpg" alt="Does Medicare Pay for Assisted Living? (Long Term Care Options)"></div>
+            <div class="post-content">
+                <span class="category-badge">Senior Moving</span>
+                <h2><a href="medicare-assisted-living.html">Does Medicare Pay for Assisted Living? (Long Term Care Options)</a></h2>
+                <p class="post-date">October 08, 2020</p>
+                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-kg0yx178-00b17eaf6b04ac00d817a0c1b46fb5af{ padding-bottom:...</p>
+                <a href="medicare-assisted-living.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div class="post-image"><img src="images/865.jpg" alt="5 Benefits of Using a Senior Move Manager"></div>
+            <div class="post-content">
+                <span class="category-badge">Senior Moving</span>
+                <h2><a href="benefits-senior-move-manager.html">5 Benefits of Using a Senior Move Manager</a></h2>
+                <p class="post-date">December 08, 2019</p>
+                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-k42skkbx-7a5bffc94db5770bb974f6fa0edcb44d{ padding-bottom:...</p>
+                <a href="benefits-senior-move-manager.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div class="post-image"><img src="images/844.jpg" alt="Downsizing Your Home Tips For Seniors [With Checklist]"></div>
+            <div class="post-content">
+                <span class="category-badge">Senior Moving</span>
+                <h2><a href="downsize-home-checklist.html">Downsizing Your Home Tips For Seniors [With Checklist]</a></h2>
+                <p class="post-date">November 18, 2019</p>
+                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-k6was2tu-9e9d5fcfe6e80daed114e6dedd683b6d{ padding-bottom:...</p>
+                <a href="downsize-home-checklist.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div class="post-image"><img src="images/705.jpg" alt="Downsizing Tips for Seniors"></div>
+            <div class="post-content">
+                <span class="category-badge">Senior Moving</span>
+                <h2><a href="downsizing-seniors.html">Downsizing Tips for Seniors</a></h2>
+                <p class="post-date">October 24, 2019</p>
+                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-k2607m60-8d7bc52ad7a63795aa21dfd79393587f{ padding-bottom:...</p>
+                <a href="downsizing-seniors.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div class="post-image"><img src="images/699.jpg" alt="Complete Checklist for Moving Your Parents Into Assisted Living"></div>
+            <div class="post-content">
+                <span class="category-badge">Senior Moving</span>
+                <h2><a href="checklist-moving-parents.html">Complete Checklist for Moving Your Parents Into Assisted Living</a></h2>
+                <p class="post-date">October 21, 2019</p>
+                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-k6wa9s2j-204f1e42dbcb4e627d851977a81ca8bd{ padding-bottom:...</p>
+                <a href="checklist-moving-parents.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div class="post-image"><img src="images/696.jpg" alt="What to Do if Your Elderly Parent Refuses Assisted Living"></div>
+            <div class="post-content">
+                <span class="category-badge">Senior Moving</span>
+                <h2><a href="elderly-parent-refuses-assisted-living.html">What to Do if Your Elderly Parent Refuses Assisted Living</a></h2>
+                <p class="post-date">October 17, 2019</p>
+                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-k6wau3af-30b0073eb80533ec457d5f0732e561c0{ padding-bottom:...</p>
+                <a href="elderly-parent-refuses-assisted-living.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 True Legacy Homes. All rights reserved.</p>
+    </footer>
+</body>
+</html>
