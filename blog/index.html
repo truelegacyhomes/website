@@ -15,359 +15,474 @@
   h._hjSettings={hjid:2420292,hjsv:6};a=o.getElementsByTagName('head')[0];
   r=o.createElement('script');r.async=1;r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
   a.appendChild(r);})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Moving Resources | True Legacy Homes Blog</title>
-    <meta name="description" content="Expert advice and resources for seniors moving to assisted living, downsizing, and estate planning.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --brand-teal: #38b5ad;
-            --brand-teal-dark: #2a8f89;
-            --text-dark: #1a1a1a;
-            --text-gray: #4a4a4a;
-            --bg-cream: #faf9f7;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | True Legacy Homes - Estate Sales & Senior Care Tips</title>
+  <meta name="description" content="Expert tips on estate sales, senior care placement, and home selling in San Diego, Orange County, and Los Angeles. 155+ articles to help you navigate life's transitions.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://iambarabbas.github.io/tlh-markdown-demo/blog.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog | True Legacy Homes">
+  <meta property="og:description" content="Expert tips on estate sales, senior care placement, and home selling in Southern California.">
+  <meta property="og:image" content="images/tlhLOGO.png">
+  <meta property="og:url" content="https://iambarabbas.github.io/tlh-markdown-demo/blog.html">
+  
+  <link rel="icon" href="images/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>html { scroll-behavior: smooth; } [id] { scroll-margin-top: 80px; }</style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'tlh-teal': '#38b5ad',
+            'tlh-teal-dark': '#2d9e96',
+            'tlh-dark': '#1e293b',
+            'tlh-warm': '#fef3e2',
+          }
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Source Sans 3', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.7;
-            background: var(--bg-cream);
-        }
-        header {
-            background: white;
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .header-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 1.5rem;
-            color: var(--brand-teal);
-            text-decoration: none;
-            font-weight: 700;
-        }
-        nav a {
-            color: var(--text-gray);
-            text-decoration: none;
-            margin-left: 2rem;
-            font-weight: 400;
-            transition: color 0.3s;
-        }
-        nav a:hover { color: var(--brand-teal); }
-        .hero {
-            background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-teal-dark) 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        .hero h1 {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .posts-grid {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-        .post-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .post-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-        .post-image {
-            height: 200px;
-            overflow: hidden;
-            background: var(--bg-cream);
-        }
-        .post-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .post-content {
-            padding: 1.5rem;
-        }
-        .category-badge {
-            display: inline-block;
-            background: rgba(56, 181, 173, 0.1);
-            color: var(--brand-teal);
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-        .post-content h2 {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-            line-height: 1.4;
-        }
-        .post-content h2 a {
-            color: var(--text-dark);
-            text-decoration: none;
-        }
-        .post-content h2 a:hover {
-            color: var(--brand-teal);
-        }
-        .post-date {
-            color: #888;
-            font-size: 0.85rem;
-            margin-bottom: 0.75rem;
-        }
-        .post-excerpt {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-        .read-more {
-            color: var(--brand-teal);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        .read-more:hover {
-            text-decoration: underline;
-        }
-        footer {
-            background: var(--text-dark);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-            margin-top: 4rem;
-        }
-        footer p {
-            opacity: 0.7;
-            font-size: 0.9rem;
-        }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 1.75rem; }
-            nav { display: none; }
-            .posts-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+      }
+    }
+  </script>
 </head>
-<body>
+<body class="bg-white text-gray-800 text-lg leading-loose">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3LD72P"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <header>
-        <div class="header-inner">
-            <a href="../index.html" class="logo">True Legacy Homes</a>
-            <nav>
-                <a href="../estate-sales.html">Estate Sales</a>
-                <a href="../about.html">About</a>
-                <a href="index.html">Blog</a>
-                <a href="../contact.html">Contact</a>
-            </nav>
+
+  <!-- Sticky Mobile CTA -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t shadow-xl p-3 md:hidden z-40">
+    <p class="text-center text-base text-gray-700 mb-2">Have questions? We're here to help.</p>
+    <a href="tel:6194501702" class="block w-full bg-tlh-teal text-white py-3 rounded-lg font-semibold text-center text-lg">
+      <svg class="w-5 h-5 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg> Call (619) 450-1702
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/">
+        <img src="images/tlhLOGO.png" alt="True Legacy Homes" class="h-16 md:h-20">
+      </a>
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex space-x-6">
+        <a href="/estate-sales/" class="hover:text-tlh-teal focus:text-tlh-teal focus:outline-2 focus:outline-tlh-teal">Estate Sales</a>
+        <a href="/care-placement/" class="hover:text-tlh-teal focus:text-tlh-teal focus:outline-2 focus:outline-tlh-teal">Care Placement</a>
+        <a href="/cash-home-offer/" class="hover:text-tlh-teal focus:text-tlh-teal focus:outline-2 focus:outline-tlh-teal">Cash Offers</a>
+        <a href="/about/" class="hover:text-tlh-teal focus:text-tlh-teal focus:outline-2 focus:outline-tlh-teal">About</a>
+        <a href="/contact/" class="hover:text-tlh-teal focus:text-tlh-teal focus:outline-2 focus:outline-tlh-teal">Contact</a>
+      </div>
+      <a href="tel:6194501702" class="hidden md:flex items-center gap-2 bg-tlh-dark text-white px-4 py-3 rounded-lg hover:bg-gray-800">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg> (619) 450-1702
+      </a>
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-700 hover:text-tlh-teal" aria-label="Open menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="px-4 py-4 space-y-3">
+        <a href="/estate-sales/" class="block py-3 text-lg hover:text-tlh-teal">Estate Sales</a>
+        <a href="/care-placement/" class="block py-3 text-lg hover:text-tlh-teal">Care Placement</a>
+        <a href="/cash-home-offer/" class="block py-3 text-lg hover:text-tlh-teal">Cash Offers</a>
+        <a href="/about/" class="block py-3 text-lg hover:text-tlh-teal">About</a>
+        <a href="/contact/" class="block py-3 text-lg hover:text-tlh-teal">Contact</a>
+        <a href="/blog/" class="block py-2 text-gray-700 hover:text-tlh-teal">Blog</a>
+        <a href="/locations/" class="block py-2 text-gray-700 hover:text-tlh-teal">Locations</a>
+        <div class="pt-3 border-t">
+          <a href="tel:6194501702" class="block w-full bg-tlh-teal text-white py-3 rounded-lg font-semibold text-center">
+            <svg class="w-5 h-5 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg> Call (619) 450-1702
+          </a>
         </div>
-    </header>
-    
-    <div class="hero">
-        <h1>Senior Moving Resources</h1>
-        <p>Expert guidance for navigating assisted living transitions, downsizing, and estate planning.</p>
+      </div>
     </div>
-    
-    <div class="posts-grid">
+  </nav>
+  <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-tlh-warm to-white py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-tlh-dark mb-4">
+        True Legacy Blog
+      </h1>
+      <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+        155+ helpful articles with tips, local insights, and stories to guide you through life's biggest transitions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Featured Post -->
+  <section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-6">Featured Article</h2>
+      <a href="blog/estate-sales-in-los-angeles-where-to-find-hidden-treasures.html" class="block bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition md:flex">
+        <img src="images/TOP-495x400.png" alt="Estate Sales in Los Angeles" class="w-full md:w-1/2 h-64 md:h-auto object-cover">
+        <div class="p-8 md:w-1/2 flex flex-col justify-center">
+          <span class="text-base bg-tlh-teal text-white px-4 py-1 rounded-full w-fit mb-4">Estate Sales</span>
+          <h3 class="text-2xl font-bold mb-3 text-tlh-dark">Estate Sales in Los Angeles: Where to Find Hidden Treasures</h3>
+          <p class="text-gray-700 mb-4">Discover the best estate sales in LA and learn expert tips for finding valuable items, from vintage furniture to collectible jewelry...</p>
+          <span class="text-tlh-teal font-semibold">Read more →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-8">Latest Articles</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <article class="post-card">
-            <div class="post-image"><img src="images/122748.jpg" alt="Senior Care Navigation"></div>
-            <div class="post-content">
-                <span class="category-badge">Senior Moving</span>
-                <h2><a href="senior-care-navigation-guide.html">Senior Care Navigation</a></h2>
-                <p class="post-date">September 16, 2025</p>
-                <p class="post-excerpt">.avia-section.av-2187wp2y-830bc5466488c10861fc053b5f3a8c7c{ background-color:#f9f9f9; background-image:unset; } .avia-image-container.av-1pp5svy2-dfaa22fb8c4acb37587adf70463cab2e img.avia_image{ box-s...</p>
-                <a href="senior-care-navigation-guide.html" class="read-more">Read More →</a>
+        <!-- Post 1 -->
+        <a href="blog/los-angeles-estate-sales-guide.html" class="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
+          <img src="blog/images/los-angeles-estate-sales-guide.png" alt="The Definitive Guide To Los Angeles Estate Sales" class="h-48 w-full object-cover">
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs bg-tlh-teal/10 text-tlh-teal px-2 py-1 rounded-full">Estate Sales</span>
+              <span class="text-base text-gray-700">January 16, 2026</span>
             </div>
-        </article>
+            <h3 class="text-xl font-bold mb-2 text-tlh-dark">The Definitive Guide To Los Angeles Estate Sales</h3>
+            <p class="text-gray-700 mb-4">Everything you need to know about buying and selling at estate sales throughout the LA area...</p>
+            <span class="text-tlh-teal font-semibold">Read more →</span>
+          </div>
+        </a>
 
-        <article class="post-card">
-            <div class="post-image"><img src="images/115878.jpg" alt="The Coming Wave: Boomer housing market and care shift"></div>
-            <div class="post-content">
-                <span class="category-badge">Senior Moving</span>
-                <h2><a href="boomer-housing-market-shift-wave.html">The Coming Wave: Boomer housing market and care shift</a></h2>
-                <p class="post-date">July 28, 2025</p>
-                <p class="post-excerpt">.avia-section.av-2f8g9mqm-adf8d7ee856f59ad337116e769714243{ background-color:#f9f9f9; background-image:unset; } .avia-image-container.av-21zpez6m-35decdde8e15fa214bcd6c4110f32662 img.avia_image{ box-s...</p>
-                <a href="boomer-housing-market-shift-wave.html" class="read-more">Read More →</a>
+        <!-- Post 2 -->
+        <a href="blog/estate-sale-for-a-parent.html" class="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
+          <img src="blog/images/estate-sale-for-a-parent.jpg" alt="6 Questions to Ask Before Starting an Estate Sale for a Parent" class="h-48 w-full object-cover">
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs bg-tlh-teal/10 text-tlh-teal px-2 py-1 rounded-full">Estate Sales</span>
+              <span class="text-base text-gray-700">December 19, 2025</span>
             </div>
-        </article>
+            <h3 class="text-xl font-bold mb-2 text-tlh-dark">6 Questions to Ask Before Starting an Estate Sale for a Parent</h3>
+            <p class="text-gray-700 mb-4">Navigate this emotional process with the right questions to ensure a smooth estate sale...</p>
+            <span class="text-tlh-teal font-semibold">Read more →</span>
+          </div>
+        </a>
 
-        <article class="post-card">
-            <div class="post-image"><img src="images/106949.jpg" alt="Navigating the Emotional Journey of Senior Care"></div>
-            <div class="post-content">
-                <span class="category-badge">Senior Moving</span>
-                <h2><a href="southern-california-senior-care.html">Navigating the Emotional Journey of Senior Care</a></h2>
-                <p class="post-date">May 29, 2025</p>
-                <p class="post-excerpt">.avia-section.av-23778ta9-e7cbdaecd89ff0b45f6fe7b94ecfc09a{ background-color:#f9f9f9; background-image:unset; } .avia-image-container.av-1w6ckhdt-7d64231555a5310ac42f48d3817153d7 img.avia_image{ box-s...</p>
-                <a href="southern-california-senior-care.html" class="read-more">Read More →</a>
+        <!-- Post 3 -->
+        <a href="blog/estate-sales-in-southern-california-strategies.html" class="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
+          <img src="blog/images/estate-sales-in-southern-california-strategies.png" alt="7 Proven Strategies for Estate Sales in Southern California" class="h-48 w-full object-cover">
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs bg-tlh-teal/10 text-tlh-teal px-2 py-1 rounded-full">Estate Sales</span>
+              <span class="text-base text-gray-700">November 19, 2025</span>
             </div>
-        </article>
+            <h3 class="text-xl font-bold mb-2 text-tlh-dark">7 Proven Strategies for Estate Sales in Southern California</h3>
+            <p class="text-gray-700 mb-4">Expert strategies to maximize your estate sale success in the SoCal market...</p>
+            <span class="text-tlh-teal font-semibold">Read more →</span>
+          </div>
+        </a>
 
-        <article class="post-card">
-            <div class="post-image"><img src="images/105976.jpg" alt="Rancho Bernardo Estate Planning"></div>
-            <div class="post-content">
-                <span class="category-badge">Senior Moving</span>
-                <h2><a href="rancho-bernardo-estate-planning.html">Rancho Bernardo Estate Planning</a></h2>
-                <p class="post-date">May 20, 2025</p>
-                <p class="post-excerpt">.avia-section.av-272wdbfr-5986c5d5a4134e6c1e6e88d9add2735a{ background-color:#f9f9f9; background-image:unset; } .avia-image-container.av-1z0sbdlz-0aa6076c050216eb1f0635bb4b3f9313 img.avia_image{ box-s...</p>
-                <a href="rancho-bernardo-estate-planning.html" class="read-more">Read More →</a>
+        <!-- Post 4 -->
+        <a href="blog/hire-an-estate-sale-company-in-southern-california.html" class="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
+          <img src="blog/images/hire-an-estate-sale-company-in-southern-california.png" alt="7 Essential Steps To Hire An Estate Sale Company" class="h-48 w-full object-cover">
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs bg-tlh-teal/10 text-tlh-teal px-2 py-1 rounded-full">Estate Sales</span>
+              <span class="text-base text-gray-700">October 9, 2025</span>
             </div>
-        </article>
+            <h3 class="text-xl font-bold mb-2 text-tlh-dark">7 Essential Steps To Hire An Estate Sale Company</h3>
+            <p class="text-gray-700 mb-4">Find the right estate sale partner with these essential hiring tips...</p>
+            <span class="text-tlh-teal font-semibold">Read more →</span>
+          </div>
+        </a>
 
-        <article class="post-card">
-            <div class="post-image"><img src="images/19326.jpg" alt="100+ Activity Ideas for Seniors in Assisted Living"></div>
-            <div class="post-content">
-                <span class="category-badge">Senior Moving</span>
-                <h2><a href="activities-for-seniors.html">100+ Activity Ideas for Seniors in Assisted Living</a></h2>
-                <p class="post-date">December 02, 2020</p>
-                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-ki6qg3qc-81d2ca3625cb2cf3f3830c6dd69b706c{ padding-bottom:...</p>
-                <a href="activities-for-seniors.html" class="read-more">Read More →</a>
+        <!-- Post 5 -->
+        <a href="blog/estate-sale-guide-for-heirs-and-executors.html" class="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
+          <img src="blog/images/estate-sale-guide-for-heirs-and-executors.png" alt="Estate Sale Guide for Heirs and Executors" class="h-48 w-full object-cover">
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs bg-tlh-teal/10 text-tlh-teal px-2 py-1 rounded-full">Estate Sales</span>
+              <span class="text-base text-gray-700">September 5, 2025</span>
             </div>
-        </article>
+            <h3 class="text-xl font-bold mb-2 text-tlh-dark">Estate Sale Guide for Heirs and Executors</h3>
+            <p class="text-gray-700 mb-4">A comprehensive guide for those managing an estate sale as part of their responsibilities...</p>
+            <span class="text-tlh-teal font-semibold">Read more →</span>
+          </div>
+        </a>
 
-        <article class="post-card">
-            <div class="post-image"><img src="images/19193.jpg" alt="Senior Housing, Apartments, and Retirement Homes in Orange County"></div>
-            <div class="post-content">
-                <span class="category-badge">Senior Moving</span>
-                <h2><a href="senior-housing-orange-county.html">Senior Housing, Apartments, and Retirement Homes in Orange County</a></h2>
-                <p class="post-date">November 20, 2020</p>
-                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-khqvarud-9b25c9bb01b66c45115514bfc681ab90{ padding-bottom:...</p>
-                <a href="senior-housing-orange-county.html" class="read-more">Read More →</a>
+        <!-- Post 6 -->
+        <a href="blog/affordable-estate-sale-companies-in-orange-county.html" class="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
+          <img src="blog/images/affordable-estate-sale-companies-in-orange-county.png" alt="Affordable Estate Sale Companies in Orange County" class="h-48 w-full object-cover">
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs bg-tlh-teal/10 text-tlh-teal px-2 py-1 rounded-full">Orange County</span>
+              <span class="text-base text-gray-700">September 3, 2025</span>
             </div>
-        </article>
+            <h3 class="text-xl font-bold mb-2 text-tlh-dark">Affordable Estate Sale Companies in Orange County</h3>
+            <p class="text-gray-700 mb-4">Find trusted, budget-friendly estate sale services throughout Orange County...</p>
+            <span class="text-tlh-teal font-semibold">Read more →</span>
+          </div>
+        </a>
 
-        <article class="post-card">
-            <div class="post-image"><img src="images/17666.jpg" alt="San Diego Senior Living Communities and Retirement Homes"></div>
-            <div class="post-content">
-                <span class="category-badge">Senior Moving</span>
-                <h2><a href="senior-living-san-diego.html">San Diego Senior Living Communities and Retirement Homes</a></h2>
-                <p class="post-date">November 07, 2020</p>
-                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-kh85qb4f-970fb1887cae21ec5fd4ef1afaa0a1dc{ padding-bottom:...</p>
-                <a href="senior-living-san-diego.html" class="read-more">Read More →</a>
+        <!-- Post 7 -->
+        <a href="blog/10-best-estate-sale-companies-in-san-diego.html" class="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
+          <img src="blog/images/10-best-estate-sale-companies-in-san-diego.png" alt="10 Best Estate Sale Companies in San Diego" class="h-48 w-full object-cover">
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs bg-tlh-teal/10 text-tlh-teal px-2 py-1 rounded-full">San Diego</span>
+              <span class="text-base text-gray-700">August 29, 2025</span>
             </div>
-        </article>
+            <h3 class="text-xl font-bold mb-2 text-tlh-dark">10 Best Estate Sale Companies in San Diego</h3>
+            <p class="text-gray-700 mb-4">Our curated list of the top estate sale companies serving San Diego County...</p>
+            <span class="text-tlh-teal font-semibold">Read more →</span>
+          </div>
+        </a>
 
-        <article class="post-card">
-            <div class="post-image"><img src="images/16407.jpg" alt="Differences Between Assisted Living and Nursing Homes"></div>
-            <div class="post-content">
-                <span class="category-badge">Senior Moving</span>
-                <h2><a href="assisted-living-vs-nursing-homes.html">Differences Between Assisted Living and Nursing Homes</a></h2>
-                <p class="post-date">October 23, 2020</p>
-                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-kgmhbdwj-cf837a4bfd71fa754ea8dbf73c7e70ec{ padding-bottom:...</p>
-                <a href="assisted-living-vs-nursing-homes.html" class="read-more">Read More →</a>
+        <!-- Post 8 -->
+        <a href="blog/estate-sales-for-seniors.html" class="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
+          <img src="blog/images/estate-sales-for-seniors.png" alt="Estate Sales For Seniors" class="h-48 w-full object-cover">
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs bg-tlh-teal/10 text-tlh-teal px-2 py-1 rounded-full">Estate Sales</span>
+              <span class="text-base text-gray-700">August 21, 2025</span>
             </div>
-        </article>
+            <h3 class="text-xl font-bold mb-2 text-tlh-dark">Estate Sales For Seniors</h3>
+            <p class="text-gray-700 mb-4">Specialized guidance for seniors looking to downsize through an estate sale...</p>
+            <span class="text-tlh-teal font-semibold">Read more →</span>
+          </div>
+        </a>
 
-        <article class="post-card">
-            <div class="post-image"><img src="images/15457.jpg" alt="Continuing Care Retirement Communities (CCRC Definition)"></div>
-            <div class="post-content">
-                <span class="category-badge">Senior Moving</span>
-                <h2><a href="continuing-care-retirement-communities.html">Continuing Care Retirement Communities (CCRC Definition)</a></h2>
-                <p class="post-date">October 15, 2020</p>
-                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-kga6niac-3bdd23ef4139933d014df0fd5b2d296d{ padding-bottom:...</p>
-                <a href="continuing-care-retirement-communities.html" class="read-more">Read More →</a>
+        <!-- Post 9 -->
+        <a href="blog/vintage-jewelry-spotlight.html" class="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
+          <img src="blog/images/vintage-jewelry-spotlight.jpg" alt="Vintage Jewelry Spotlight" class="h-48 w-full object-cover">
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs bg-tlh-teal/10 text-tlh-teal px-2 py-1 rounded-full">Collectibles</span>
+              <span class="text-base text-gray-700">April 23, 2025</span>
             </div>
-        </article>
+            <h3 class="text-xl font-bold mb-2 text-tlh-dark">Vintage Jewelry Spotlight</h3>
+            <p class="text-gray-700 mb-4">Learn how to identify and value vintage jewelry finds at estate sales...</p>
+            <span class="text-tlh-teal font-semibold">Read more →</span>
+          </div>
+        </a>
 
-        <article class="post-card">
-            <div class="post-image"><img src="images/14648.jpg" alt="Does Medicare Pay for Assisted Living? (Long Term Care Options)"></div>
-            <div class="post-content">
-                <span class="category-badge">Senior Moving</span>
-                <h2><a href="medicare-assisted-living.html">Does Medicare Pay for Assisted Living? (Long Term Care Options)</a></h2>
-                <p class="post-date">October 08, 2020</p>
-                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-kg0yx178-00b17eaf6b04ac00d817a0c1b46fb5af{ padding-bottom:...</p>
-                <a href="medicare-assisted-living.html" class="read-more">Read More →</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <div class="post-image"><img src="images/865.jpg" alt="5 Benefits of Using a Senior Move Manager"></div>
-            <div class="post-content">
-                <span class="category-badge">Senior Moving</span>
-                <h2><a href="benefits-senior-move-manager.html">5 Benefits of Using a Senior Move Manager</a></h2>
-                <p class="post-date">December 08, 2019</p>
-                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-k42skkbx-7a5bffc94db5770bb974f6fa0edcb44d{ padding-bottom:...</p>
-                <a href="benefits-senior-move-manager.html" class="read-more">Read More →</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <div class="post-image"><img src="images/844.jpg" alt="Downsizing Your Home Tips For Seniors [With Checklist]"></div>
-            <div class="post-content">
-                <span class="category-badge">Senior Moving</span>
-                <h2><a href="downsize-home-checklist.html">Downsizing Your Home Tips For Seniors [With Checklist]</a></h2>
-                <p class="post-date">November 18, 2019</p>
-                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-k6was2tu-9e9d5fcfe6e80daed114e6dedd683b6d{ padding-bottom:...</p>
-                <a href="downsize-home-checklist.html" class="read-more">Read More →</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <div class="post-image"><img src="images/705.jpg" alt="Downsizing Tips for Seniors"></div>
-            <div class="post-content">
-                <span class="category-badge">Senior Moving</span>
-                <h2><a href="downsizing-seniors.html">Downsizing Tips for Seniors</a></h2>
-                <p class="post-date">October 24, 2019</p>
-                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-k2607m60-8d7bc52ad7a63795aa21dfd79393587f{ padding-bottom:...</p>
-                <a href="downsizing-seniors.html" class="read-more">Read More →</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <div class="post-image"><img src="images/699.jpg" alt="Complete Checklist for Moving Your Parents Into Assisted Living"></div>
-            <div class="post-content">
-                <span class="category-badge">Senior Moving</span>
-                <h2><a href="checklist-moving-parents.html">Complete Checklist for Moving Your Parents Into Assisted Living</a></h2>
-                <p class="post-date">October 21, 2019</p>
-                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-k6wa9s2j-204f1e42dbcb4e627d851977a81ca8bd{ padding-bottom:...</p>
-                <a href="checklist-moving-parents.html" class="read-more">Read More →</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <div class="post-image"><img src="images/696.jpg" alt="What to Do if Your Elderly Parent Refuses Assisted Living"></div>
-            <div class="post-content">
-                <span class="category-badge">Senior Moving</span>
-                <h2><a href="elderly-parent-refuses-assisted-living.html">What to Do if Your Elderly Parent Refuses Assisted Living</a></h2>
-                <p class="post-date">October 17, 2019</p>
-                <p class="post-excerpt">.flex_column.av-9mkaz-1290167e9d9a7b5fefa26565cb55c1ab{ border-radius:0px 0px 0px 0px; padding:0px 0px 0px 0px; } #top .av-special-heading.av-k6wau3af-30b0073eb80533ec457d5f0732e561c0{ padding-bottom:...</p>
-                <a href="elderly-parent-refuses-assisted-living.html" class="read-more">Read More →</a>
-            </div>
-        </article>
+      </div>
     </div>
-    
-    <footer>
-        <p>&copy; 2025 True Legacy Homes. All rights reserved.</p>
-    </footer>
+  </section>
+
+  <!-- Popular Guides Section -->
+  <section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-8">Popular Guides</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        
+        <a href="blog/prepare-estate-sale.html" class="flex items-center gap-4 bg-gray-50 rounded-xl p-4 hover:shadow-lg transition">
+          <div class="w-16 h-16 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl">📦</span>
+          </div>
+          <div>
+            <h3 class="font-bold text-tlh-dark">Preparing for an Estate Sale: The Ultimate Guide</h3>
+            <p class="text-base text-gray-700">Complete checklist for estate sale preparation</p>
+          </div>
+        </a>
+
+        <a href="blog/estate-sale-steps.html" class="flex items-center gap-4 bg-gray-50 rounded-xl p-4 hover:shadow-lg transition">
+          <div class="w-16 h-16 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl"><svg class="w-5 h-5 inline-block text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></span>
+          </div>
+          <div>
+            <h3 class="font-bold text-tlh-dark">Have a Successful Estate Sale by Doing These 10 Steps</h3>
+            <p class="text-base text-gray-700">Step-by-step guide to estate sale success</p>
+          </div>
+        </a>
+
+        <a href="blog/estate-sales-pricing-guide.html" class="flex items-center gap-4 bg-gray-50 rounded-xl p-4 hover:shadow-lg transition">
+          <div class="w-16 h-16 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl"><svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span>
+          </div>
+          <div>
+            <h3 class="font-bold text-tlh-dark">Estate Sales Pricing Guide</h3>
+            <p class="text-base text-gray-700">Guidelines to price items and increase profits</p>
+          </div>
+        </a>
+
+        <a href="blog/choose-estate-sale-services-company.html" class="flex items-center gap-4 bg-gray-50 rounded-xl p-4 hover:shadow-lg transition">
+          <div class="w-16 h-16 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-tlh-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-tlh-dark">How To Find An Estate Sale Company</h3>
+            <p class="text-base text-gray-700">Questions to ask when hiring an estate sale company</p>
+          </div>
+        </a>
+
+        <a href="blog/estate-sales-versus-yard-sales.html" class="flex items-center gap-4 bg-gray-50 rounded-xl p-4 hover:shadow-lg transition">
+          <div class="w-16 h-16 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl">⚖️</span>
+          </div>
+          <div>
+            <h3 class="font-bold text-tlh-dark">Estate Sales vs. Yard Sales: What's the Difference?</h3>
+            <p class="text-base text-gray-700">Understanding when to use each type of sale</p>
+          </div>
+        </a>
+
+        <a href="blog/date-of-death-appraisal.html" class="flex items-center gap-4 bg-gray-50 rounded-xl p-4 hover:shadow-lg transition">
+          <div class="w-16 h-16 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl">📄</span>
+          </div>
+          <div>
+            <h3 class="font-bold text-tlh-dark">What Is a 'Date Of Death' Appraisal</h3>
+            <p class="text-base text-gray-700">Complete guide to estate appraisals</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Collectibles & Antiques Section -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-8">Collectibles & Antiques Guides</h2>
+      <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+        
+        <a href="blog/hummel-figurines.html" class="bg-white rounded-lg p-4 hover:shadow-md transition text-center">
+          <span class="text-3xl mb-2 block">🎨</span>
+          <h3 class="font-semibold text-sm">Hummel Figurines</h3>
+        </a>
+
+        <a href="blog/royal-doulton-figurines.html" class="bg-white rounded-lg p-4 hover:shadow-md transition text-center">
+          <span class="text-3xl mb-2 block">👑</span>
+          <h3 class="font-semibold text-sm">Royal Doulton Figurines</h3>
+        </a>
+
+        <a href="blog/lladro-values.html" class="bg-white rounded-lg p-4 hover:shadow-md transition text-center">
+          <span class="text-3xl mb-2 block">🦢</span>
+          <h3 class="font-semibold text-sm">Lladró Values</h3>
+        </a>
+
+        <a href="blog/fenton-glass-values.html" class="bg-white rounded-lg p-4 hover:shadow-md transition text-center">
+          <span class="text-3xl mb-2 block">🫖</span>
+          <h3 class="font-semibold text-sm">Fenton Glass Values</h3>
+        </a>
+
+        <a href="blog/trifari-jewelry.html" class="bg-white rounded-lg p-4 hover:shadow-md transition text-center">
+          <span class="text-3xl mb-2 block">💍</span>
+          <h3 class="font-semibold text-sm">Trifari Jewelry</h3>
+        </a>
+
+        <a href="blog/beanie-baby-value.html" class="bg-white rounded-lg p-4 hover:shadow-md transition text-center">
+          <span class="text-3xl mb-2 block">🧸</span>
+          <h3 class="font-semibold text-sm">Beanie Baby Values</h3>
+        </a>
+
+        <a href="blog/duncan-phyfe-furniture.html" class="bg-white rounded-lg p-4 hover:shadow-md transition text-center">
+          <span class="text-3xl mb-2 block">🪑</span>
+          <h3 class="font-semibold text-sm">Duncan Phyfe Furniture</h3>
+        </a>
+
+        <a href="blog/vintage-purses.html" class="bg-white rounded-lg p-4 hover:shadow-md transition text-center">
+          <span class="text-3xl mb-2 block">👜</span>
+          <h3 class="font-semibold text-sm">Vintage Purses</h3>
+        </a>
+
+        <a href="blog/corningware-blue-cornflower.html" class="bg-white rounded-lg p-4 hover:shadow-md transition text-center">
+          <span class="text-3xl mb-2 block">🍳</span>
+          <h3 class="font-semibold text-sm">CorningWare Blue Cornflower</h3>
+        </a>
+
+        <a href="blog/antique-crocks.html" class="bg-white rounded-lg p-4 hover:shadow-md transition text-center">
+          <span class="text-3xl mb-2 block">🏺</span>
+          <h3 class="font-semibold text-sm">Antique Crocks</h3>
+        </a>
+
+        <a href="blog/toby-jugs-values.html" class="bg-white rounded-lg p-4 hover:shadow-md transition text-center">
+          <span class="text-3xl mb-2 block">🍺</span>
+          <h3 class="font-semibold text-sm">Toby Jugs Values</h3>
+        </a>
+
+        <a href="blog/vintage-vs-antique.html" class="bg-white rounded-lg p-4 hover:shadow-md transition text-center">
+          <span class="text-3xl mb-2 block"><svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span>
+          <h3 class="font-semibold text-sm">Vintage vs Antique</h3>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- All Articles Link -->
+  <section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p class="text-gray-700 mb-4">Browse all 155+ articles in our library</p>
+      <a href="blog/what-are-estate-sales.html" class="inline-block bg-tlh-dark text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800">
+        Start with: What Are Estate Sales?
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-tlh-teal text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Have Questions?</h2>
+      <p class="text-xl mb-8 opacity-90">
+        Our team is here to help you navigate estate sales, care placement, and home selling—with compassion and expertise.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/schedule-consult/" class="bg-white text-tlh-teal px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100">
+          Get Guidance Today
+        </a>
+        <a href="tel:6194501702" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-tlh-teal">
+          Call (619) 450-1702
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-tlh-dark text-gray-300 py-12 pb-24 md:pb-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <img src="images/tlhLOGO.png" alt="True Legacy Homes" class="h-16 mb-4 brightness-200">
+          <p class="text-base">Estate Sales with Dignity. Helping Southern California families navigate life's biggest transitions.</p>
+          <div class="flex gap-4 mt-4">
+            <a href="https://facebook.com/truelegacyhomes"><img src="images/facebook-logo-black.png" alt="Facebook" class="w-6 h-6 invert opacity-60 hover:opacity-100"></a>
+            <a href="https://instagram.com/truelegacyhomes"><img src="images/instagram.png" alt="Instagram" class="w-6 h-6 invert opacity-60 hover:opacity-100"></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">Services</h4>
+          <ul class="space-y-2">
+            <li><a href="/estate-sales/" class="hover:text-white">Estate Sales</a></li>
+            <li><a href="/care-placement/" class="hover:text-white">Care Placement</a></li>
+            <li><a href="/cash-home-offer/" class="hover:text-white">Cash Home Offers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="/blog/" class="hover:text-white">Blog</a></li>
+            <li><a href="/faq/" class="hover:text-white">FAQ</a></li>
+            <li><a href="/testimonials/" class="hover:text-white">Testimonials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">Contact</h4>
+          <ul class="space-y-2">
+            <li><a href="tel:6194501702" class="hover:text-white">(619) 450-1702</a></li>
+            <li><a href="mailto:info@truelegacyhomes.com" class="hover:text-white">info@truelegacyhomes.com</a></li>
+            <li>3635 Ruffin Rd, Suite 100<br>San Diego, CA 92123</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-base">
+        <p>© 2026 True Legacy Homes. All rights reserved. · <a href="/privacy-policy/" class="hover:text-white">Privacy Policy</a> · <a href="/tos/" class="hover:text-white">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

@@ -1,0 +1,57 @@
+# True Legacy Homes - URL Redirects
+# For Cloudways/Apache server
+
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove trailing slash for files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
+# Add trailing slash for directories
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^ %{REQUEST_URI}/ [R=301,L]
+
+# Serve index.html for directory requests
+DirectoryIndex index.html
+
+# ============================================
+# Old URL -> New URL Redirects
+# ============================================
+
+# Main page redirects (if someone hits old .html URLs)
+Redirect 301 /cash-offers.html /cash-home-offer/
+Redirect 301 /privacy.html /privacy-policy/
+Redirect 301 /terms.html /tos/
+
+# Blog posts - redirect from /blog/slug to /slug (WP structure)
+# These will need to be expanded with actual blog post slugs
+RewriteRule ^blog/los-angeles-estate-sales-guide/?$ /los-angeles-estate-sales-guide/ [R=301,L]
+RewriteRule ^blog/estate-sales-for-seniors/?$ /estate-sales-for-seniors/ [R=301,L]
+RewriteRule ^blog/estate-sale-for-a-parent/?$ /estate-sale-for-a-parent/ [R=301,L]
+RewriteRule ^blog/ultimate-estate-sale-guide/?$ /ultimate-estate-sale-guide/ [R=301,L]
+RewriteRule ^blog/10-best-estate-sale-companies-in-san-diego/?$ /10-best-estate-sale-companies-in-san-diego/ [R=301,L]
+
+# Location redirects - old neighborhood pages to main county
+# San Diego neighborhoods -> /locations/san-diego/
+RewriteRule ^locations/care-placement-(.*)/?$ /care-placement/ [R=301,L]
+RewriteRule ^locations/(la-jolla|del-mar|encinitas|carlsbad|oceanside|poway|escondido|chula-vista|el-cajon|la-mesa|santee|coronado|point-loma|pacific-beach|mission-beach|ocean-beach|downtown-san-diego|hillcrest|north-park|south-park|kearny-mesa|mira-mesa|rancho-bernardo|scripps-ranch|carmel-valley)/?$ /locations/san-diego/ [R=301,L]
+
+# Orange County neighborhoods -> /locations/orangecounty/
+RewriteRule ^locations/(irvine|newport-beach|huntington-beach|laguna-beach|costa-mesa|anaheim|fullerton|orange|santa-ana|tustin|mission-viejo|lake-forest|aliso-viejo|dana-point|san-clemente|yorba-linda|brea|placentia|garden-grove|westminster|fountain-valley|laguna-hills|laguna-niguel|laguna-woods|seal-beach|los-alamitos|cypress|buena-park|la-habra|stanton|corona-del-mar|newport-coast|coto-de-caza|rancho-santa-margarita|ladera-ranch|san-juan-capistrano)/?$ /locations/orangecounty/ [R=301,L]
+
+# LA County neighborhoods -> /locations/los-angeles/
+RewriteRule ^locations/(long-beach|torrance|carson|compton|downey|whittier|la-mirada|cerritos|lakewood|bellflower|paramount|south-gate|lynwood|hawthorne|inglewood|gardena|redondo-beach|manhattan-beach|hermosa-beach|palos-verdes|rancho-palos-verdes|rolling-hills|san-pedro|wilmington|harbor-city|lomita|signal-hill|hawaiian-gardens)/?$ /locations/los-angeles/ [R=301,L]
+
+# Catch-all for any other old location pages
+RewriteRule ^locations/([a-z0-9-]+)/?$ /locations/ [R=301,L]
+
+# ============================================
+# Error Pages
+# ============================================
+ErrorDocument 404 /404.html
