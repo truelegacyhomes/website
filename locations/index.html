@@ -129,10 +129,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         <!-- San Diego -->
         <a href="/website/locations/san-diego/" class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
-          <div class="h-48 bg-gradient-to-br from-tlh-teal to-tlh-teal-dark flex items-center justify-center">
-            <div class="text-center text-white">
-              <span class="text-5xl">🌴</span>
-              <p class="text-xl font-bold mt-2">San Diego County</p>
+          <div class="h-48 relative overflow-hidden">
+            <img src="/website/images/san-diego-skyline.jpg" alt="San Diego" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center pb-4">
+              <p class="text-xl font-bold text-white">San Diego County</p>
             </div>
           </div>
           <div class="p-6">
@@ -150,10 +150,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         <!-- Orange County -->
         <a href="/website/locations/orangecounty/" class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
-          <div class="h-48 bg-gradient-to-br from-orange-400 to-orange-500 flex items-center justify-center">
-            <div class="text-center text-white">
-              <span class="text-5xl">🍊</span>
-              <p class="text-xl font-bold mt-2">Orange County</p>
+          <div class="h-48 relative overflow-hidden">
+            <img src="/website/images/orange-county-beach.jpg" alt="Orange County" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center pb-4">
+              <p class="text-xl font-bold text-white">Orange County</p>
             </div>
           </div>
           <div class="p-6">
@@ -171,10 +171,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         <!-- Los Angeles -->
         <a href="/website/locations/los-angeles/" class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
-          <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
-            <div class="text-center text-white">
-              <span class="text-5xl">🎬</span>
-              <p class="text-xl font-bold mt-2">Los Angeles County</p>
+          <div class="h-48 relative overflow-hidden">
+            <img src="/website/images/los-angeles-skyline.jpg" alt="Los Angeles" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center pb-4">
+              <p class="text-xl font-bold text-white">Los Angeles County</p>
             </div>
           </div>
           <div class="p-6">
@@ -197,16 +197,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="py-16 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8">Our Service Area</h2>
-      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-        <div class="aspect-video">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d847714.3477!2d-118.1!3d33.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDMwJzAwLjAiTiAxMTjCsDA2JzAwLjAiVw!5e0!3m2!1sen!2sus!4v1"
-            width="100%" 
-            height="100%" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-          </iframe>
+      <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">We serve families throughout Southern California, from San Diego to Los Angeles.</p>
+      
+      <!-- Three location maps -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- San Diego Map -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="aspect-square">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429156.8583748811!2d-117.28543279453977!3d32.82423697408078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9530fad921e4b%3A0xd3a21fdfd15df79!2sSan%20Diego%20County%2C%20CA!5e0!3m2!1sen!2sus!4v1"
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-tlh-dark">San Diego County</h3>
+            <p class="text-sm text-gray-600">La Jolla to Escondido</p>
+          </div>
+        </div>
+        
+        <!-- Orange County Map -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="aspect-square">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d424143.5387851813!2d-118.01841799453977!3d33.67083897408078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc925c54d5f7cf%3A0xdea6c3618ff0d607!2sOrange%20County%2C%20CA!5e0!3m2!1sen!2sus!4v1"
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-tlh-dark">Orange County</h3>
+            <p class="text-sm text-gray-600">Irvine to Laguna Beach</p>
+          </div>
+        </div>
+        
+        <!-- Los Angeles Map -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="aspect-square">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212098.77104859507!2d-118.23894934999999!3d33.88418515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b6f2a8b3b06b%3A0x10d2e9b7d5a5b78e!2sLong%20Beach%2C%20CA!5e0!3m2!1sen!2sus!4v1"
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-tlh-dark">Los Angeles (South)</h3>
+            <p class="text-sm text-gray-600">Long Beach to Whittier</p>
+          </div>
         </div>
       </div>
     </div>
