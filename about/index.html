@@ -531,4 +531,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     }
   </script>
+<!-- Location-based address swap -->
+  <script>
+    (function() {
+      const addresses = {
+        sd: '3635 Ruffin Rd, Suite 100<br>San Diego, CA 92123',
+        oc: '15375 Barranca Parkway, Suite A-107<br>Irvine, CA 92618',
+        la: '5230 Pacific Concourse Dr, Suite 110<br>Los Angeles, CA 90045'
+      };
+      function setAddress(r) { var el = document.getElementById('office-address'); if (el && addresses[r]) el.innerHTML = addresses[r]; }
+      var p = new URLSearchParams(window.location.search), rp = p.get('region');
+      if (rp && addresses[rp]) { setAddress(rp); return; }
+      fetch('https://ipinfo.io/json?token=').then(function(r){return r.json()}).then(function(d) {
+        if (d.region === 'California') {
+          var c = (d.city || '').toLowerCase(), loc = (d.loc || '').split(','), lat = parseFloat(loc[0]) || 0;
+          if (lat > 33.7 || ['los angeles','pasadena','glendale','burbank','long beach','torrance'].includes(c)) setAddress('la');
+          else if (lat > 33.4 || ['irvine','anaheim','santa ana','costa mesa','fullerton','orange'].includes(c)) setAddress('oc');
+        }
+      }).catch(function(){});
+    })();
+  </script>
 </body>

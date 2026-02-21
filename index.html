@@ -794,7 +794,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </li>
             <li class="flex items-start gap-2">
               <svg class="w-5 h-5 text-tlh-teal mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-              <span>3635 Ruffin Rd, Suite 100<br>San Diego, CA 92123</span>
+              <span id="office-address">3635 Ruffin Rd, Suite 100<br>San Diego, CA 92123</span>
             </li>
           </ul>
         </div>
@@ -805,4 +805,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </footer>
 
+  <!-- Location-based address swap -->
+  <script>
+    (function() {
+      const addresses = {
+        sd: '3635 Ruffin Rd, Suite 100<br>San Diego, CA 92123',
+        oc: '15375 Barranca Parkway, Suite A-107<br>Irvine, CA 92618',
+        la: '5230 Pacific Concourse Dr, Suite 110<br>Los Angeles, CA 90045'
+      };
+      
+      function setAddress(region) {
+        const el = document.getElementById('office-address');
+        if (el && addresses[region]) {
+          el.innerHTML = addresses[region];
+        }
+      }
+      
+      // Check URL param first
+      const params = new URLSearchParams(window.location.search);
+      const regionParam = params.get('region');
+      if (regionParam && addresses[regionParam]) {
+        setAddress(regionParam);
+        return;
+      }
+      
+      // Fall back to IP geolocation
+      fetch('https://ipinfo.io/json?token=')
+        .then(r => r.json())
+        .then(data => {
+          const region = data.region || '';
+          // Map California regions to our offices
+          if (region === 'California') {
+            const city = (data.city || '').toLowerCase();
+            const loc = (data.loc || '').split(',');
+            const lat = parseFloat(loc[0]) || 0;
+            
+            // LA area: north of ~33.7 lat
+            // OC area: between ~33.4 and 33.7
+            // SD area: south of ~33.4
+            if (lat > 33.7 || ['los angeles', 'pasadena', 'glendale', 'burbank', 'long beach', 'torrance'].includes(city)) {
+              setAddress('la');
+            } else if (lat > 33.4 || ['irvine', 'anaheim', 'santa ana', 'costa mesa', 'fullerton', 'orange', 'huntington beach', 'newport beach'].includes(city)) {
+              setAddress('oc');
+            }
+            // Default stays SD
+          }
+        })
+        .catch(() => {}); // Fail silently, keep SD default
+    })();
+  </script>
 </body>
