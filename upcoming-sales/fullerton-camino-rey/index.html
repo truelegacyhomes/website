@@ -14,8 +14,8 @@
     .lightbox img { max-height: 90vh; max-width: 90vw; object-fit: contain; }
     .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.2); color: white; padding: 1rem; cursor: pointer; font-size: 2rem; border-radius: 0.5rem; }
     .lightbox-nav:hover { background: rgba(255,255,255,0.4); }
-    .lightbox-close { position: absolute; top: 1rem; right: 1rem; color: white; font-size: 2rem; cursor: pointer; padding: 0.5rem; }
-    .lightbox-counter { position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); color: white; font-size: 1rem; }
+    .lightbox-close { position: absolute; top: 1rem; right: 1rem; color: white; font-size: 2rem; cursor: pointer; }
+    .lightbox-counter { position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); color: white; }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -25,9 +25,8 @@
       <a href="/website/upcoming-sales/" class="text-sm bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20">← All Sales</a>
     </div>
   </header>
-
   <div class="relative h-72 md:h-96 overflow-hidden">
-    <img src="https://picturescdn.estatesales.net/4812093/1-2/026f19c8-a468-4009-82f2-daaface47459.jpg">
+    <img src="https://picturescdn.estatesales.net/4812093/1-2/0d02a37d-a7a4-4243-8b92-3dbc990f498c.jpg" alt="Estate Sale in Fullerton" class="w-full h-full object-cover">
     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
     <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
       <div class="max-w-6xl mx-auto">
@@ -37,50 +36,27 @@
       </div>
     </div>
   </div>
-
   <div class="max-w-6xl mx-auto px-4 py-8">
     <div class="grid md:grid-cols-3 gap-8">
       <div class="md:col-span-2">
         <div class="bg-white rounded-xl p-6 shadow-sm mb-6">
           <h2 class="text-2xl font-bold mb-4">About This Sale</h2>
           <p class="text-gray-700 mb-4">Spacious home in Fullerton with quality furniture, home decor, tools, outdoor items, and everyday essentials.</p>
-          <p class="text-gray-700 mb-4">Great selection of furniture, kitchenware, garden tools, and much more. Everything must go!</p>
+          <p class="text-gray-700">Great selection of furniture, kitchenware, garden tools, and much more!</p>
         </div>
-
         <div class="bg-white rounded-xl p-6 shadow-sm">
-          <h2 class="text-2xl font-bold mb-4">Photos <span class="text-gray-400 text-lg font-normal">(16)</span></h2>
+          <h2 class="text-2xl font-bold mb-4">Photos <span class="text-gray-400 text-lg font-normal">(12)</span></h2>
           <div id="gallery" class="grid grid-cols-4 gap-2"></div>
         </div>
       </div>
-
       <div class="md:col-span-1">
         <div class="bg-white rounded-xl p-6 shadow-sm sticky top-4">
           <h3 class="text-xl font-bold mb-4">Sale Details</h3>
           <div class="space-y-4 text-sm">
-            <div class="flex items-start gap-3">
-              <div class="w-10 h-10 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-tlh-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-              </div>
-              <div><p class="font-semibold">Dates</p><p class="text-gray-600">Sat, Feb 21 & Sun, Feb 22</p></div>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-10 h-10 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-tlh-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              </div>
-              <div><p class="font-semibold">Hours</p><p class="text-gray-600">8:00 AM - 2:00 PM</p></div>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-10 h-10 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-tlh-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-              </div>
-              <div><p class="font-semibold">Address</p><p class="text-gray-600">2365 Camino Rey<br>Fullerton, CA 92833</p></div>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-10 h-10 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-tlh-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
-              </div>
-              <div><p class="font-semibold">Payment</p><p class="text-gray-600">Cash & Credit Cards</p></div>
-            </div>
+            <div class="flex items-start gap-3"><div class="w-10 h-10 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-tlh-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg></div><div><p class="font-semibold">Dates</p><p class="text-gray-600">Sat, Feb 21 & Sun, Feb 22</p></div></div>
+            <div class="flex items-start gap-3"><div class="w-10 h-10 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-tlh-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><div><p class="font-semibold">Hours</p><p class="text-gray-600">8:00 AM - 2:00 PM</p></div></div>
+            <div class="flex items-start gap-3"><div class="w-10 h-10 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-tlh-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></div><div><p class="font-semibold">Address</p><p class="text-gray-600">2365 Camino Rey<br>Fullerton, CA 92833</p></div></div>
+            <div class="flex items-start gap-3"><div class="w-10 h-10 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-tlh-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg></div><div><p class="font-semibold">Payment</p><p class="text-gray-600">Cash & Credit Cards</p></div></div>
           </div>
           <hr class="my-6">
           <a href="https://maps.google.com/maps?q=2365+Camino+Rey,+Fullerton,+CA+92833" target="_blank" class="block w-full bg-tlh-dark text-white text-center py-3 rounded-lg font-semibold hover:bg-gray-800 transition">Get Directions →</a>
@@ -88,83 +64,37 @@
       </div>
     </div>
   </div>
-
-  <div class="max-w-6xl mx-auto px-4 pb-8">
-    <div class="bg-white rounded-xl p-6 shadow-sm">
-      <h3 class="font-bold mb-3">Terms & Conditions</h3>
-      <ul class="text-gray-600 text-sm space-y-1">
-        <li>• We accept all major credit cards</li>
-        <li>• Delivery services available for larger items</li>
-        <li>• We do NOT presell any items</li>
-        <li>• All sales are final</li>
-      </ul>
-    </div>
-  </div>
-
   <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
     <span class="lightbox-close">&times;</span>
-    <span class="lightbox-nav" style="left: 1rem;" onclick="prevImage(event)">&#10094;</span>
+    <span class="lightbox-nav" style="left:1rem" onclick="prevImage(event)">&#10094;</span>
     <img id="lightbox-img" src="" alt="">
-    <span class="lightbox-nav" style="right: 1rem;" onclick="nextImage(event)">&#10095;</span>
+    <span class="lightbox-nav" style="right:1rem" onclick="nextImage(event)">&#10095;</span>
     <span class="lightbox-counter" id="lightbox-counter"></span>
   </div>
-
-  <footer class="bg-tlh-dark text-gray-400 py-6">
-    <div class="max-w-6xl mx-auto px-4 text-center text-sm">
-      <p>© 2026 True Legacy Homes. <a href="/website/" class="hover:text-white">Need an estate sale?</a></p>
-    </div>
-  </footer>
-
+  <footer class="bg-tlh-dark text-gray-400 py-6"><div class="max-w-6xl mx-auto px-4 text-center text-sm"><p>© 2026 True Legacy Homes. <a href="/website/" class="hover:text-white">Need an estate sale?</a></p></div></footer>
   <script>
     const images = [
-      "https://picturescdn.estatesales.net/4812093/1-2/026f19c8-a468-4009-82f2-daaface47459.jpg",
-      "https://picturescdn.estatesales.net/4812093/1-2/07932bbc-0d50-430b-9f08-fab5bfd4d8bc.jpg",
       "https://picturescdn.estatesales.net/4812093/1-2/0d02a37d-a7a4-4243-8b92-3dbc990f498c.jpg",
       "https://picturescdn.estatesales.net/4812093/1-2/255b71d1-13c6-4c35-92b7-60c42f8fc000.jpg",
       "https://picturescdn.estatesales.net/4812093/1-2/470a0cf7-5a2c-41c2-9c1f-352ed7e5f971.jpg",
       "https://picturescdn.estatesales.net/4812093/1-2/5824116c-9959-4fbe-9969-83fba23e34bd.jpg",
       "https://picturescdn.estatesales.net/4812093/1-2/6572e482-66ee-4e5c-a846-15384fd74ebc.jpg",
-      "https://picturescdn.estatesales.net/4812093/1-2/6daeaec2-ffd2-4420-bdd8-2d87693d0d26.jpg",
       "https://picturescdn.estatesales.net/4812093/1-2/73941f4e-2b84-4ac1-a635-55fc7cb99be7.jpg",
+      "https://picturescdn.estatesales.net/4812093/1-2/81fa454f-61c8-407a-98fe-97dfb3d11d0c.jpg",
       "https://picturescdn.estatesales.net/4812093/1-2/a67899f4-5c7e-4a84-ada3-7ac68b3db93e.jpg",
       "https://picturescdn.estatesales.net/4812093/1-2/a8fa2e95-392e-4985-9409-7c3a99d016e9.jpg",
       "https://picturescdn.estatesales.net/4812093/1-2/bb4ad643-38cc-4c87-898a-429938945f1c.jpg",
-      "https://picturescdn.estatesales.net/4812093/1-2/dd6fc5cb-abbf-41e8-931b-853c0fca1a40.jpg",
       "https://picturescdn.estatesales.net/4812093/1-2/e934620a-37d8-4f77-a260-21f8f22e85cd.jpg",
-      "https://picturescdn.estatesales.net/4812093/1-2/f059b6a6-fbe1-46af-807f-370a54eb2f30.jpg",
       "https://picturescdn.estatesales.net/4812093/1-2/f64888be-131e-49b4-ace5-baa8ef97477a.jpg",
     ];
     let currentIndex = 0;
     const gallery = document.getElementById('gallery');
-    images.forEach((url, i) => {
-      const img = document.createElement('img');
-      img.src = url;
-      img.className = 'w-full h-24 md:h-28 object-cover rounded-lg cursor-pointer hover:opacity-80 transition';
-      img.loading = 'lazy';
-      img.onclick = () => openLightbox(i + 1);
-      gallery.appendChild(img);
-    });
-    function openLightbox(index) {
-      currentIndex = index;
-      document.getElementById('lightbox-img').src = images[index - 1];
-      document.getElementById('lightbox-counter').textContent = index + ' / ' + images.length;
-      document.getElementById('lightbox').classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox(e) {
-      if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
-        document.getElementById('lightbox').classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    }
+    images.forEach((url, i) => { const img = document.createElement('img'); img.src = url; img.className = 'w-full h-24 md:h-28 object-cover rounded-lg cursor-pointer hover:opacity-80 transition'; img.loading = 'lazy'; img.onclick = () => openLightbox(i + 1); gallery.appendChild(img); });
+    function openLightbox(index) { currentIndex = index; document.getElementById('lightbox-img').src = images[index - 1]; document.getElementById('lightbox-counter').textContent = index + ' / ' + images.length; document.getElementById('lightbox').classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function closeLightbox(e) { if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) { document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow = ''; } }
     function prevImage(e) { e.stopPropagation(); currentIndex = currentIndex > 1 ? currentIndex - 1 : images.length; openLightbox(currentIndex); }
     function nextImage(e) { e.stopPropagation(); currentIndex = currentIndex < images.length ? currentIndex + 1 : 1; openLightbox(currentIndex); }
-    document.addEventListener('keydown', (e) => {
-      if (!document.getElementById('lightbox').classList.contains('active')) return;
-      if (e.key === 'Escape') closeLightbox({target: {id: 'lightbox'}});
-      if (e.key === 'ArrowLeft') prevImage({stopPropagation: () => {}});
-      if (e.key === 'ArrowRight') nextImage({stopPropagation: () => {}});
-    });
+    document.addEventListener('keydown', (e) => { if (!document.getElementById('lightbox').classList.contains('active')) return; if (e.key === 'Escape') closeLightbox({target: {id: 'lightbox'}}); if (e.key === 'ArrowLeft') prevImage({stopPropagation: () => {}}); if (e.key === 'ArrowRight') nextImage({stopPropagation: () => {}}); });
   </script>
 </body>
 </html>
