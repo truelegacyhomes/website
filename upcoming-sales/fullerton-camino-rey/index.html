@@ -4,10 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estate Sale: 2365 Camino Rey, Fullerton | True Legacy Homes</title>
-  <meta name="description" content="Estate sale at 2365 Camino Rey, Fullerton, CA 92833. February 21-22, 2026. Spacious home with furniture, tools, outdoor items, and household essentials.">
+  <meta name="description" content="Estate sale at 2365 Camino Rey, Fullerton, CA 92833. February 21-22, 2026. Spacious home with furniture, home decor, tools, and more.">
   <link rel="icon" href="/website/images/favicon.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config = { theme: { extend: { colors: { 'tlh-teal': '#38b5ad', 'tlh-teal-dark': '#2d9e96', 'tlh-dark': '#1e293b' } } } }</script>
+  <style>
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 50; }
+    .lightbox.active { display: flex; align-items: center; justify-content: center; }
+    .lightbox img { max-height: 90vh; max-width: 90vw; object-fit: contain; }
+    .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.2); color: white; padding: 1rem; cursor: pointer; font-size: 2rem; border-radius: 0.5rem; }
+    .lightbox-nav:hover { background: rgba(255,255,255,0.4); }
+    .lightbox-close { position: absolute; top: 1rem; right: 1rem; color: white; font-size: 2rem; cursor: pointer; padding: 0.5rem; }
+    .lightbox-counter { position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); color: white; font-size: 1rem; }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
   <header class="bg-tlh-dark text-white py-4">
@@ -18,7 +27,7 @@
   </header>
 
   <div class="relative h-72 md:h-96 overflow-hidden">
-    <img src="images/6.jpg" alt="Estate Sale in Fullerton" class="w-full h-full object-cover">
+    <img src="https://picturescdn.estatesales.net/4812093/1-2/026f19c8-a468-4009-82f2-daaface47459.jpg">
     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
     <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
       <div class="max-w-6xl mx-auto">
@@ -34,30 +43,13 @@
       <div class="md:col-span-2">
         <div class="bg-white rounded-xl p-6 shadow-sm mb-6">
           <h2 class="text-2xl font-bold mb-4">About This Sale</h2>
-          <p class="text-gray-700 mb-4">Spacious Fullerton home filled with quality furniture, home decor, tools, outdoor items, and everyday household essentials. Great finds for every room in your home!</p>
-          <p class="text-gray-700">You'll find furniture pieces, decorative items, garage and garden tools, patio furniture, kitchen items, and much more. Come early for the best selection!</p>
+          <p class="text-gray-700 mb-4">Spacious home in Fullerton with quality furniture, home decor, tools, outdoor items, and everyday essentials.</p>
+          <p class="text-gray-700 mb-4">Great selection of furniture, kitchenware, garden tools, and much more. Everything must go!</p>
         </div>
 
         <div class="bg-white rounded-xl p-6 shadow-sm">
-          <h2 class="text-2xl font-bold mb-4">Photos</h2>
-          <div class="grid grid-cols-4 gap-2">
-            <img src="images/1.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
-            <img src="images/2.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
-            <img src="images/3.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
-            <img src="images/4.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
-            <img src="images/5.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
-            <img src="images/6.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
-            <img src="images/7.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
-            <img src="images/8.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
-            <img src="images/9.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
-            <img src="images/10.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
-            <img src="images/11.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
-            <img src="images/12.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
-            <img src="images/13.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
-            <img src="images/14.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
-            <img src="images/15.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
-            <img src="images/16.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
-          </div>
+          <h2 class="text-2xl font-bold mb-4">Photos <span class="text-gray-400 text-lg font-normal">(16)</span></h2>
+          <div id="gallery" class="grid grid-cols-4 gap-2"></div>
         </div>
       </div>
 
@@ -109,10 +101,70 @@
     </div>
   </div>
 
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <span class="lightbox-close">&times;</span>
+    <span class="lightbox-nav" style="left: 1rem;" onclick="prevImage(event)">&#10094;</span>
+    <img id="lightbox-img" src="" alt="">
+    <span class="lightbox-nav" style="right: 1rem;" onclick="nextImage(event)">&#10095;</span>
+    <span class="lightbox-counter" id="lightbox-counter"></span>
+  </div>
+
   <footer class="bg-tlh-dark text-gray-400 py-6">
     <div class="max-w-6xl mx-auto px-4 text-center text-sm">
       <p>© 2026 True Legacy Homes. <a href="/website/" class="hover:text-white">Need an estate sale?</a></p>
     </div>
   </footer>
+
+  <script>
+    const images = [
+      "https://picturescdn.estatesales.net/4812093/1-2/026f19c8-a468-4009-82f2-daaface47459.jpg",
+      "https://picturescdn.estatesales.net/4812093/1-2/07932bbc-0d50-430b-9f08-fab5bfd4d8bc.jpg",
+      "https://picturescdn.estatesales.net/4812093/1-2/0d02a37d-a7a4-4243-8b92-3dbc990f498c.jpg",
+      "https://picturescdn.estatesales.net/4812093/1-2/255b71d1-13c6-4c35-92b7-60c42f8fc000.jpg",
+      "https://picturescdn.estatesales.net/4812093/1-2/470a0cf7-5a2c-41c2-9c1f-352ed7e5f971.jpg",
+      "https://picturescdn.estatesales.net/4812093/1-2/5824116c-9959-4fbe-9969-83fba23e34bd.jpg",
+      "https://picturescdn.estatesales.net/4812093/1-2/6572e482-66ee-4e5c-a846-15384fd74ebc.jpg",
+      "https://picturescdn.estatesales.net/4812093/1-2/6daeaec2-ffd2-4420-bdd8-2d87693d0d26.jpg",
+      "https://picturescdn.estatesales.net/4812093/1-2/73941f4e-2b84-4ac1-a635-55fc7cb99be7.jpg",
+      "https://picturescdn.estatesales.net/4812093/1-2/a67899f4-5c7e-4a84-ada3-7ac68b3db93e.jpg",
+      "https://picturescdn.estatesales.net/4812093/1-2/a8fa2e95-392e-4985-9409-7c3a99d016e9.jpg",
+      "https://picturescdn.estatesales.net/4812093/1-2/bb4ad643-38cc-4c87-898a-429938945f1c.jpg",
+      "https://picturescdn.estatesales.net/4812093/1-2/dd6fc5cb-abbf-41e8-931b-853c0fca1a40.jpg",
+      "https://picturescdn.estatesales.net/4812093/1-2/e934620a-37d8-4f77-a260-21f8f22e85cd.jpg",
+      "https://picturescdn.estatesales.net/4812093/1-2/f059b6a6-fbe1-46af-807f-370a54eb2f30.jpg",
+      "https://picturescdn.estatesales.net/4812093/1-2/f64888be-131e-49b4-ace5-baa8ef97477a.jpg",
+    ];
+    let currentIndex = 0;
+    const gallery = document.getElementById('gallery');
+    images.forEach((url, i) => {
+      const img = document.createElement('img');
+      img.src = url;
+      img.className = 'w-full h-24 md:h-28 object-cover rounded-lg cursor-pointer hover:opacity-80 transition';
+      img.loading = 'lazy';
+      img.onclick = () => openLightbox(i + 1);
+      gallery.appendChild(img);
+    });
+    function openLightbox(index) {
+      currentIndex = index;
+      document.getElementById('lightbox-img').src = images[index - 1];
+      document.getElementById('lightbox-counter').textContent = index + ' / ' + images.length;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(e) {
+      if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+    function prevImage(e) { e.stopPropagation(); currentIndex = currentIndex > 1 ? currentIndex - 1 : images.length; openLightbox(currentIndex); }
+    function nextImage(e) { e.stopPropagation(); currentIndex = currentIndex < images.length ? currentIndex + 1 : 1; openLightbox(currentIndex); }
+    document.addEventListener('keydown', (e) => {
+      if (!document.getElementById('lightbox').classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox({target: {id: 'lightbox'}});
+      if (e.key === 'ArrowLeft') prevImage({stopPropagation: () => {}});
+      if (e.key === 'ArrowRight') nextImage({stopPropagation: () => {}});
+    });
+  </script>
 </body>
 </html>
