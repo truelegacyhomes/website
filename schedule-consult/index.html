@@ -149,85 +149,162 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2 class="text-2xl font-bold mb-2">Schedule Your Free Consultation</h2>
           <p class="text-gray-700 mb-6">We'll call you within 24 hours to discuss your needs.</p>
           
-          <form action="mailto:info@truelegacyhomes.com?subject=Free%20Consultation%20Request" method="post" enctype="text/plain" class="space-y-4">
-            <div>
-              <label for="name" class="block text-base font-semibold mb-2">Full Name *</label>
-              <input 
-                type="text" 
-                id="name" 
-                name="name" 
-                required
-                class="w-full px-4 py-4 text-lg rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tlh-teal focus:border-transparent"
-                placeholder="Your full name"
-              >
+          <form id="consult-form" action="https://www.truelegacyhomes.com/schedule-consult/" method="get" class="space-y-4">
+            <!-- Hidden tracking fields for Salesforce -->
+            <input type="hidden" name="channel" id="channel" value="">
+            <input type="hidden" name="channeldrilldown1" id="channeldrilldown1" value="">
+            <input type="hidden" name="channeldrilldown2" id="channeldrilldown2" value="">
+            <input type="hidden" name="channeldrilldown3" id="channeldrilldown3" value="">
+            <input type="hidden" name="landingpage" id="landingpage" value="">
+            <input type="hidden" name="landingpagegroup" id="landingpagegroup" value="">
+            
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label for="first_name" class="block text-base font-semibold mb-2">First Name *</label>
+                <input 
+                  type="text" 
+                  id="first_name" 
+                  name="first_name" 
+                  required
+                  autocomplete="given-name"
+                  class="w-full px-4 py-4 text-lg rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tlh-teal focus:border-transparent"
+                  placeholder="First name"
+                >
+              </div>
+              <div>
+                <label for="last_name" class="block text-base font-semibold mb-2">Last Name *</label>
+                <input 
+                  type="text" 
+                  id="last_name" 
+                  name="last_name" 
+                  required
+                  autocomplete="family-name"
+                  class="w-full px-4 py-4 text-lg rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tlh-teal focus:border-transparent"
+                  placeholder="Last name"
+                >
+              </div>
             </div>
             
             <div>
-              <label for="phone" class="block text-base font-semibold mb-2">Phone Number *</label>
-              <input 
-                type="tel" 
-                id="phone" 
-                name="phone" 
-                required
-                pattern="[0-9\-\(\)\s]+"
-                class="w-full px-4 py-4 text-lg rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tlh-teal focus:border-transparent"
-                placeholder="(555) 123-4567"
-              >
-            </div>
-            
-            <div>
-              <label for="email" class="block text-base font-semibold mb-2">Email Address *</label>
+              <label for="email" class="block text-base font-semibold mb-2">Email *</label>
               <input 
                 type="email" 
                 id="email" 
                 name="email" 
                 required
+                autocomplete="email"
                 class="w-full px-4 py-4 text-lg rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tlh-teal focus:border-transparent"
                 placeholder="your.email@example.com"
               >
             </div>
             
             <div>
-              <label for="service" class="block text-base font-semibold mb-2">What brings you here? *</label>
+              <label for="phone" class="block text-base font-semibold mb-2">Phone *</label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                required
+                autocomplete="tel"
+                pattern="[\d\s\-\(\)\+]+"
+                class="w-full px-4 py-4 text-lg rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tlh-teal focus:border-transparent"
+                placeholder="(619) 555-1234"
+              >
+            </div>
+            
+            <div>
+              <label for="service" class="block text-base font-semibold mb-2">Service I'm Most Interested In *</label>
               <select 
                 id="service" 
                 name="service" 
                 required
                 class="w-full px-4 py-4 text-lg rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tlh-teal focus:border-transparent bg-white"
               >
-                <option value="">Select a service</option>
-                <option value="estate-sale">Estate Sale</option>
-                <option value="care-placement">Senior Care Placement</option>
-                <option value="cash-offer">Sell My Home for Cash</option>
-                <option value="downsizing">Downsizing Help</option>
-                <option value="inherited-property">Inherited Property</option>
-                <option value="multiple">Multiple Services</option>
-                <option value="not-sure">Not Sure—Need Guidance</option>
+                <option value="Estate Sale">Estate Sale</option>
+                <option value="Care Placement">Care Placement</option>
+                <option value="Cash Home Offer">Cash Home Offer</option>
               </select>
             </div>
             
-            <div>
-              <label for="message" class="block text-base font-semibold mb-2">Tell us a bit about your situation (optional)</label>
-              <textarea 
-                id="message" 
-                name="message" 
-                rows="3"
-                class="w-full px-4 py-4 text-lg rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tlh-teal focus:border-transparent"
-                placeholder="What's on your mind? We're here to help..."
-              ></textarea>
+            <div id="property-fields" class="space-y-4">
+              <div>
+                <label for="property_county" class="block text-base font-semibold mb-2">Property County *</label>
+                <select 
+                  id="property_county" 
+                  name="property_county" 
+                  required
+                  class="w-full px-4 py-4 text-lg rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tlh-teal focus:border-transparent bg-white"
+                >
+                  <option value="San Diego">San Diego</option>
+                  <option value="Orange County">Orange County</option>
+                  <option value="Los Angeles">Los Angeles</option>
+                </select>
+              </div>
+              
+              <div>
+                <label for="property_zip" class="block text-base font-semibold mb-2">Property Zip *</label>
+                <input 
+                  type="text" 
+                  id="property_zip" 
+                  name="property_zip" 
+                  required
+                  pattern="[0-9]{5}"
+                  maxlength="5"
+                  inputmode="numeric"
+                  class="w-full px-4 py-4 text-lg rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-tlh-teal focus:border-transparent"
+                  placeholder="92123"
+                >
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3">
+              <input 
+                type="checkbox" 
+                id="messaging_optin" 
+                name="messaging_optin" 
+                value="yes"
+                class="mt-1.5 w-5 h-5 rounded border-gray-300 text-tlh-teal focus:ring-tlh-teal"
+              >
+              <label for="messaging_optin" class="text-base text-gray-700">
+                Yes, I'd like to receive occasional updates and tips via text message. (Optional)
+              </label>
             </div>
             
             <button 
               type="submit" style="min-height: 52px;" 
               class="w-full bg-tlh-teal text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-tlh-teal-dark transition"
             >
-              Get My Free Guidance →
+              Get My Free Consultation →
             </button>
             
             <p class="text-sm text-gray-700 text-center">
               <svg class="w-5 h-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg> Your information is private. We'll never share it with anyone.
             </p>
           </form>
+          
+          <script>
+            // Show/hide property fields based on service selection
+            const serviceSelect = document.getElementById('service');
+            const propertyFields = document.getElementById('property-fields');
+            const propertyCounty = document.getElementById('property_county');
+            const propertyZip = document.getElementById('property_zip');
+            
+            function togglePropertyFields() {
+              const service = serviceSelect.value;
+              const showFields = service === 'Estate Sale' || service === 'Cash Home Offer';
+              propertyFields.style.display = showFields ? 'block' : 'none';
+              propertyCounty.required = showFields;
+              propertyZip.required = showFields;
+            }
+            
+            serviceSelect.addEventListener('change', togglePropertyFields);
+            togglePropertyFields(); // Run on load
+            
+            // Populate tracking fields
+            const urlParams = new URLSearchParams(window.location.search);
+            document.getElementById('channel').value = urlParams.get('utm_source') || '';
+            document.getElementById('landingpage').value = window.location.pathname;
+          </script>
         </div>
       </div>
     </div>
