@@ -7,15 +7,7 @@
   <meta name="description" content="Estate sale at 2365 Camino Rey, Fullerton, CA 92833. February 21-22, 2026. Spacious home with furniture, tools, outdoor items, and household essentials.">
   <link rel="icon" href="/website/images/favicon.png">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { colors: { 'tlh-teal': '#38b5ad', 'tlh-teal-dark': '#2d9e96', 'tlh-dark': '#1e293b' } } } }
-  </script>
-  <style>
-    .gallery-img { cursor: pointer; transition: transform 0.2s; }
-    .gallery-img:hover { transform: scale(1.03); }
-    #lightbox { display: none; }
-    #lightbox.active { display: flex; }
-  </style>
+  <script>tailwind.config = { theme: { extend: { colors: { 'tlh-teal': '#38b5ad', 'tlh-teal-dark': '#2d9e96', 'tlh-dark': '#1e293b' } } } }</script>
 </head>
 <body class="bg-gray-100 text-gray-800">
   <header class="bg-tlh-dark text-white py-4">
@@ -26,7 +18,7 @@
   </header>
 
   <div class="relative h-72 md:h-96 overflow-hidden">
-    <img src="https://picturescdn.estatesales.net/4812093/1-1/6daeaec2-ffd2-4420-bdd8-2d87693d0d26.jpg" alt="Estate Sale in Fullerton" class="w-full h-full object-cover">
+    <img src="images/6.jpg" alt="Estate Sale in Fullerton" class="w-full h-full object-cover">
     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
     <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
       <div class="max-w-6xl mx-auto">
@@ -47,24 +39,24 @@
         </div>
 
         <div class="bg-white rounded-xl p-6 shadow-sm">
-          <h2 class="text-2xl font-bold mb-4">Photos <span class="text-base font-normal text-gray-500">(16 images)</span></h2>
-          <div class="grid grid-cols-3 md:grid-cols-4 gap-2">
-            <img src="https://picturescdn.estatesales.net/4812093/1-1/07932bbc-0d50-430b-9f08-fab5bfd4d8bc.jpg" alt="" class="gallery-img w-full h-24 md:h-28 object-cover rounded-lg" onclick="openLightbox(this.src)">
-            <img src="https://picturescdn.estatesales.net/4812093/1-1/255b71d1-13c6-4c35-92b7-60c42f8fc000.jpg" alt="" class="gallery-img w-full h-24 md:h-28 object-cover rounded-lg" onclick="openLightbox(this.src)">
-            <img src="https://picturescdn.estatesales.net/4812093/1-1/26d9b03e-5952-46cc-bda4-49da14139270.jpg" alt="" class="gallery-img w-full h-24 md:h-28 object-cover rounded-lg" onclick="openLightbox(this.src)">
-            <img src="https://picturescdn.estatesales.net/4812093/1-1/5824116c-9959-4fbe-9969-83fba23e34bd.jpg" alt="" class="gallery-img w-full h-24 md:h-28 object-cover rounded-lg" onclick="openLightbox(this.src)">
-            <img src="https://picturescdn.estatesales.net/4812093/1-1/6572e482-66ee-4e5c-a846-15384fd74ebc.jpg" alt="" class="gallery-img w-full h-24 md:h-28 object-cover rounded-lg" onclick="openLightbox(this.src)">
-            <img src="https://picturescdn.estatesales.net/4812093/1-1/6daeaec2-ffd2-4420-bdd8-2d87693d0d26.jpg" alt="" class="gallery-img w-full h-24 md:h-28 object-cover rounded-lg" onclick="openLightbox(this.src)">
-            <img src="https://picturescdn.estatesales.net/4812093/1-1/70782507-82a1-4f77-954b-8c9cf96466fd.jpg" alt="" class="gallery-img w-full h-24 md:h-28 object-cover rounded-lg" onclick="openLightbox(this.src)">
-            <img src="https://picturescdn.estatesales.net/4812093/1-1/73941f4e-2b84-4ac1-a635-55fc7cb99be7.jpg" alt="" class="gallery-img w-full h-24 md:h-28 object-cover rounded-lg" onclick="openLightbox(this.src)">
-            <img src="https://picturescdn.estatesales.net/4812093/1-1/92171352-a6e0-41da-941f-2528e2a22925.jpg" alt="" class="gallery-img w-full h-24 md:h-28 object-cover rounded-lg" onclick="openLightbox(this.src)">
-            <img src="https://picturescdn.estatesales.net/4812093/1-1/a67899f4-5c7e-4a84-ada3-7ac68b3db93e.jpg" alt="" class="gallery-img w-full h-24 md:h-28 object-cover rounded-lg" onclick="openLightbox(this.src)">
-            <img src="https://picturescdn.estatesales.net/4812093/1-1/a8fa2e95-392e-4985-9409-7c3a99d016e9.jpg" alt="" class="gallery-img w-full h-24 md:h-28 object-cover rounded-lg" onclick="openLightbox(this.src)">
-            <img src="https://picturescdn.estatesales.net/4812093/1-1/af73aad2-dd98-4b3f-b5f9-62f3902d2780.jpg" alt="" class="gallery-img w-full h-24 md:h-28 object-cover rounded-lg" onclick="openLightbox(this.src)">
-            <img src="https://picturescdn.estatesales.net/4812093/1-1/d916fadf-f69d-4557-932f-730d7c27c6df.jpg" alt="" class="gallery-img w-full h-24 md:h-28 object-cover rounded-lg" onclick="openLightbox(this.src)">
-            <img src="https://picturescdn.estatesales.net/4812093/1-1/dd6fc5cb-abbf-41e8-931b-853c0fca1a40.jpg" alt="" class="gallery-img w-full h-24 md:h-28 object-cover rounded-lg" onclick="openLightbox(this.src)">
-            <img src="https://picturescdn.estatesales.net/4812093/1-1/e7c335e2-c22a-49ac-b857-698b34ef80dd.jpg" alt="" class="gallery-img w-full h-24 md:h-28 object-cover rounded-lg" onclick="openLightbox(this.src)">
-            <img src="https://picturescdn.estatesales.net/4812093/1-1/e934620a-37d8-4f77-a260-21f8f22e85cd.jpg" alt="" class="gallery-img w-full h-24 md:h-28 object-cover rounded-lg" onclick="openLightbox(this.src)">
+          <h2 class="text-2xl font-bold mb-4">Photos</h2>
+          <div class="grid grid-cols-4 gap-2">
+            <img src="images/1.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
+            <img src="images/2.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
+            <img src="images/3.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
+            <img src="images/4.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
+            <img src="images/5.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
+            <img src="images/6.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
+            <img src="images/7.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
+            <img src="images/8.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
+            <img src="images/9.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
+            <img src="images/10.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
+            <img src="images/11.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
+            <img src="images/12.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
+            <img src="images/13.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
+            <img src="images/14.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
+            <img src="images/15.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
+            <img src="images/16.jpg" alt="" class="w-full h-24 md:h-28 object-cover rounded-lg">
           </div>
         </div>
       </div>
@@ -72,12 +64,12 @@
       <div class="md:col-span-1">
         <div class="bg-white rounded-xl p-6 shadow-sm sticky top-4">
           <h3 class="text-xl font-bold mb-4">Sale Details</h3>
-          <div class="space-y-4">
+          <div class="space-y-4 text-sm">
             <div class="flex items-start gap-3">
               <div class="w-10 h-10 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
                 <svg class="w-5 h-5 text-tlh-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
               </div>
-              <div><p class="font-semibold">Dates</p><p class="text-gray-600">Saturday, Feb 21</p><p class="text-gray-600">Sunday, Feb 22</p></div>
+              <div><p class="font-semibold">Dates</p><p class="text-gray-600">Sat, Feb 21 & Sun, Feb 22</p></div>
             </div>
             <div class="flex items-start gap-3">
               <div class="w-10 h-10 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -89,7 +81,7 @@
               <div class="w-10 h-10 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
                 <svg class="w-5 h-5 text-tlh-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
               </div>
-              <div><p class="font-semibold">Address</p><p class="text-gray-600">2365 Camino Rey</p><p class="text-gray-600">Fullerton, CA 92833</p></div>
+              <div><p class="font-semibold">Address</p><p class="text-gray-600">2365 Camino Rey<br>Fullerton, CA 92833</p></div>
             </div>
             <div class="flex items-start gap-3">
               <div class="w-10 h-10 bg-tlh-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -99,7 +91,7 @@
             </div>
           </div>
           <hr class="my-6">
-          <a href="https://maps.google.com/maps?q=2365+Camino+Rey,+Fullerton,+CA+92833" target="_blank" rel="noopener" class="block w-full bg-tlh-dark text-white text-center py-3 rounded-lg font-semibold hover:bg-gray-800 transition mb-3">Get Directions →</a>
+          <a href="https://maps.google.com/maps?q=2365+Camino+Rey,+Fullerton,+CA+92833" target="_blank" class="block w-full bg-tlh-dark text-white text-center py-3 rounded-lg font-semibold hover:bg-gray-800 transition">Get Directions →</a>
         </div>
       </div>
     </div>
@@ -122,15 +114,5 @@
       <p>© 2026 True Legacy Homes. <a href="/website/" class="hover:text-white">Need an estate sale?</a></p>
     </div>
   </footer>
-
-  <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 items-center justify-center p-4" onclick="closeLightbox()">
-    <button class="absolute top-4 right-4 text-white text-4xl">&times;</button>
-    <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full object-contain">
-  </div>
-
-  <script>
-    function openLightbox(src) { document.getElementById('lightbox-img').src = src; document.getElementById('lightbox').classList.add('active'); document.body.style.overflow = 'hidden'; }
-    function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow = ''; }
-  </script>
 </body>
 </html>
