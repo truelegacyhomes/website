@@ -42,6 +42,7 @@
   
   <!-- Preconnect for performance -->
   <link rel="stylesheet" href="/css/tailwind.min.css">
+  <link rel="preload" as="image" type="image/webp" href="/images/main-hero.webp">
   
   <!-- Schema.org Organization Markup -->
   <script type="application/ld+json">
@@ -184,7 +185,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <nav class="bg-white shadow-sm sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
       <a href="/">
-        <img src="/images/tlhLOGO.png" alt="True Legacy Homes" class="h-16 md:h-20">
+        <img src="/images/tlhLOGO.webp" alt="True Legacy Homes" class="h-16 md:h-20" width="1800" height="900">
       </a>
       <!-- Desktop Nav -->
       <div class="hidden md:flex space-x-6">
@@ -260,7 +261,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
           <!-- Mobile hero image -->
           <div class="md:hidden mb-6">
-            <img src="/images/mobile-hero.png" alt="True Legacy Homes helping Southern California families" class="w-full rounded-xl shadow-lg">
+            <picture><source srcset="/images/mobile-hero.webp" type="image/webp"><img src="/images/mobile-hero.webp" alt="True Legacy Homes helping Southern California families" class="w-full rounded-xl shadow-lg" width="1184" height="896"></picture>
           </div>
           
           <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
@@ -297,7 +298,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         <!-- Hero image: hidden on mobile, shown on tablet+ -->
         <div class="hidden md:block relative">
-          <img src="/images/main-hero.jpg" alt="True Legacy Homes team helping Southern California families with estate sales" class="rounded-2xl shadow-2xl w-full" loading="eager">
+          <picture><source srcset="/images/main-hero.webp" type="image/webp"><img src="/images/main-hero.webp" alt="True Legacy Homes team helping Southern California families with estate sales" class="rounded-2xl shadow-2xl w-full" width="1184" height="896" loading="eager"></picture>
           <!-- Floating testimonial card -->
           <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 max-w-xs hidden lg:block">
             <div class="flex items-start gap-3">
@@ -471,7 +472,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Most Popular
           </div>
           <div class="relative">
-            <img src="/images/estatesale.jpg" alt="Professional estate sale with vintage furniture and collectibles" class="w-full h-48 object-cover" loading="lazy">
+            <img src="/images/estatesale.webp" alt="Professional estate sale with vintage furniture and collectibles" class="w-full h-48 object-cover" width="1536" height="1024" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-[#38b5ad]/40 to-transparent"></div>
           </div>
           <div class="p-6">
@@ -494,7 +495,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Care Placement - Purple -->
         <a href="/care-placement/" class="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition border-t-4 border-tlh-purple">
           <div class="relative">
-            <img src="/images/careplacement.jpg" alt="Caring senior care placement specialist helping families" class="w-full h-48 object-cover" loading="lazy">
+            <img src="/images/careplacement.webp" alt="Caring senior care placement specialist helping families" class="w-full h-48 object-cover" width="1536" height="1024" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-[#A47EAF]/40 to-transparent"></div>
           </div>
           <div class="p-6">
@@ -517,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Cash Offers - Dark Slate -->
         <a href="/cash-home-offer/" class="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition border-t-4 border-tlh-dark">
           <div class="relative">
-            <img src="/images/cashOffer.jpg" alt="Home keys being handed over - we buy homes in any condition" class="w-full h-48 object-cover" loading="lazy">
+            <img src="/images/cashOffer.webp" alt="Home keys being handed over - we buy homes in any condition" class="w-full h-48 object-cover" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-tlh-dark/40 to-transparent"></div>
           </div>
           <div class="p-6">
@@ -640,7 +641,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Founder Quote -->
   <section class="bg-tlh-dark text-white py-16">
     <div class="max-w-4xl mx-auto px-4 text-center">
-      <img src="/images/paul.jpg" alt="Paul Williamson, Founder of True Legacy Homes" class="w-24 h-24 rounded-full object-cover mx-auto mb-6 border-4 border-tlh-teal/30">
+      <img src="/images/paul.webp" alt="Paul Williamson, Founder of True Legacy Homes" class="w-24 h-24 rounded-full object-cover mx-auto mb-6 border-4 border-tlh-teal/30">
       <p class="text-xl md:text-2xl italic mb-6 leading-relaxed">
         "I started True Legacy Homes because I watched my own family struggle through an estate sale after losing my grandmother. The industry was cold, transactional, and didn't care about the memories behind the items. I knew there had to be a better way—one that honors both the family and the legacy they're entrusting us with."
       </p>
@@ -737,7 +738,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-4 gap-8">
         <div>
-          <img src="/images/tlhLOGO.png" alt="True Legacy Homes" class="h-14 mb-4 brightness-200" loading="lazy">
+          <img src="/images/tlhLOGO.webp" alt="True Legacy Homes" class="h-14 mb-4 brightness-200" loading="lazy">
           <p class="text-base mb-4">Estate Sales with Dignity. Helping Southern California families navigate life's biggest transitions.</p>
           <div class="flex gap-4">
             <a href="https://facebook.com/truelegacyhomes" aria-label="Facebook" class="w-10 h-10 bg-gray-700 hover:bg-tlh-teal rounded-full flex items-center justify-center transition">
