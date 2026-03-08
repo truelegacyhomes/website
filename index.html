@@ -420,15 +420,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 class="text-2xl md:text-3xl font-bold mb-3">See How We Help Families</h2>
         <p class="text-gray-700 text-lg">Watch how we guide families through life's biggest transitions</p>
       </div>
-      <div class="relative rounded-2xl overflow-hidden shadow-2xl" style="padding-top: 56.25%;">
-        <iframe 
-          src="https://player.vimeo.com/video/852533279?h=0&title=0&byline=0&portrait=0" 
-          class="absolute inset-0 w-full h-full"
-          frameborder="0" 
-          allow="autoplay; fullscreen; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
+      <div id="video-facade" class="relative rounded-2xl overflow-hidden shadow-2xl cursor-pointer group" style="padding-top: 56.25%;" onclick="loadVideo()">
+        <img 
+          src="https://vumbnail.com/852533279.jpg" 
+          alt="Watch how True Legacy Homes helps families" 
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="lazy">
+        <div class="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition">
+          <div class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+            <svg class="w-8 h-8 text-tlh-teal ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
       </div>
+      <script>
+        function loadVideo() {
+          document.getElementById('video-facade').innerHTML = '<iframe src="https://player.vimeo.com/video/852533279?h=0&title=0&byline=0&portrait=0&autoplay=1&dnt=1" class="absolute inset-0 w-full h-full" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+        }
+      </script>
     </div>
   </section>
 
