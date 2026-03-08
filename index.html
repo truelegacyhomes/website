@@ -824,37 +824,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       }
       
-      // Check URL param first
+      // Check URL param for region override
       const params = new URLSearchParams(window.location.search);
       const regionParam = params.get('region');
       if (regionParam && addresses[regionParam]) {
         setAddress(regionParam);
-        return;
       }
-      
-      // Fall back to IP geolocation
-      fetch('https://ipinfo.io/json?token=')
-        .then(r => r.json())
-        .then(data => {
-          const region = data.region || '';
-          // Map California regions to our offices
-          if (region === 'California') {
-            const city = (data.city || '').toLowerCase();
-            const loc = (data.loc || '').split(',');
-            const lat = parseFloat(loc[0]) || 0;
-            
-            // LA area: north of ~33.7 lat
-            // OC area: between ~33.4 and 33.7
-            // SD area: south of ~33.4
-            if (lat > 33.7 || ['los angeles', 'pasadena', 'glendale', 'burbank', 'long beach', 'torrance'].includes(city)) {
-              setAddress('la');
-            } else if (lat > 33.4 || ['irvine', 'anaheim', 'santa ana', 'costa mesa', 'fullerton', 'orange', 'huntington beach', 'newport beach'].includes(city)) {
-              setAddress('oc');
-            }
-            // Default stays SD
-          }
-        })
-        .catch(() => {}); // Fail silently, keep SD default
     })();
   </script>
 </body>

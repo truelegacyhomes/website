@@ -307,14 +307,7 @@
       };
       function setAddress(r) { var el = document.getElementById('office-address'); if (el && addresses[r]) el.innerHTML = addresses[r]; }
       var p = new URLSearchParams(window.location.search), rp = p.get('region');
-      if (rp && addresses[rp]) { setAddress(rp); return; }
-      fetch('https://ipinfo.io/json?token=').then(function(r){return r.json()}).then(function(d) {
-        if (d.region === 'California') {
-          var c = (d.city || '').toLowerCase(), loc = (d.loc || '').split(','), lat = parseFloat(loc[0]) || 0;
-          if (lat > 33.7 || ['los angeles','pasadena','glendale','burbank','long beach','torrance'].includes(c)) setAddress('la');
-          else if (lat > 33.4 || ['irvine','anaheim','santa ana','costa mesa','fullerton','orange'].includes(c)) setAddress('oc');
-        }
-      }).catch(function(){});
+      if (rp && addresses[rp]) { setAddress(rp); } 
     })();
   </script>
 
