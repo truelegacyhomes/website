@@ -157,7 +157,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Fill out the form below and we'll get back to you within 24 hours to schedule your free consultation. Not sure what you need? Check our <a href="/faq/" class="text-tlh-teal hover:underline">FAQ</a> for answers.
           </p>
           
-          <form action="mailto:info@truelegacyhomes.com?subject=Consultation%20Request%20-%20True%20Legacy%20Homes" method="post" enctype="text/plain" class="space-y-6">
+          <form id="contact-form" class="space-y-6">
+            <!-- Hidden tracking fields -->
+            <input type="hidden" name="form_type" id="form_type" value="contact">
+            <input type="hidden" name="utm_source" id="utm_source" value="">
+            <input type="hidden" name="utm_medium" id="utm_medium" value="">
+            <input type="hidden" name="utm_campaign" id="utm_campaign" value="">
+            <input type="hidden" name="landing_page" id="landing_page" value="">
+            
             <div class="grid md:grid-cols-2 gap-4">
               <div>
                 <label for="firstName" class="block text-base font-semibold mb-2">First Name *</label>
@@ -274,6 +281,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               By submitting this form, you agree to receive communications from True Legacy Homes. We respect your privacy and will never share your information.
             </p>
           </form>
+          
+          <script>
+            // Supabase config
+            const SUPABASE_URL = 'https://inqbqchjxzvdvcslvskb.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlucWJxY2hqeHp2ZHZjc2x2c2tiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwNzA4NzEsImV4cCI6MjA4ODY0Njg3MX0.cqOtZQQOdSI9hwVxI8RSAMsgxI3hJsZ8ttzehJRKVgk';
+            
+            // Populate tracking fields from URL params
+            const urlParams = new URLSearchParams(window.location.search);
+            document.getElementById('landing_page').value = window.location.pathname;
+            document.getElementById('utm_source').value = urlParams.get('utm_source') || '';
+            document.getElementById('utm_medium').value = urlParams.get('utm_medium') || '';
+            document.getElementById('utm_campaign').value = urlParams.get('utm_campaign') || '';
+            
+            // Handle form submission
+            document.getElementById('contact-form').addEventListener('submit', async function(e) {
+              e.preventDefault();
+              
+              const submitBtn = this.querySelector('button[type="submit"]');
+              const originalText = submitBtn.textContent;
+              submitBtn.textContent = 'Sending...';
+              submitBtn.disabled = true;
+              
+              // Gather form data
+              const formData = {
+                form_type: document.getElementById('form_type').value,
+                first_name: document.getElementById('firstName').value,
+                last_name: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service_interest: document.getElementById('service').value,
+                city: document.getElementById('location').value,
+                message: document.getElementById('message').value,
+                timeline: document.getElementById('timeline').value || null,
+                landing_page: document.getElementById('landing_page').value || null,
+                utm_source: document.getElementById('utm_source').value || null,
+                utm_medium: document.getElementById('utm_medium').value || null,
+                utm_campaign: document.getElementById('utm_campaign').value || null,
+                metadata: {
+                  referrer: document.referrer,
+                  user_agent: navigator.userAgent
+                }
+              };
+              
+              try {
+                const response = await fetch(`${SUPABASE_URL}/rest/v1/form_submissions`, {
+                  method: 'POST',
+                  headers: {
+                    'apikey': SUPABASE_ANON_KEY,
+                    'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                    'Content-Type': 'application/json',
+                    'Prefer': 'return=minimal'
+                  },
+                  body: JSON.stringify(formData)
+                });
+                
+                if (response.ok) {
+                  // Success - redirect to thank you page
+                  window.location.href = '/thank-you/';
+                } else {
+                  throw new Error('Form submission failed');
+                }
+              } catch (error) {
+                console.error('Error:', error);
+                alert('Something went wrong. Please call us at (619) 450-1702 or try again.');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+              }
+            });
+          </script>
         </div>
         
         <!-- Side Info -->

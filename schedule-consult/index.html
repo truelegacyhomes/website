@@ -134,14 +134,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2 class="text-2xl font-bold mb-2">Schedule Your Free Consultation</h2>
           <p class="text-gray-700 mb-6">We'll call you within 24 hours to discuss your needs.</p>
           
-          <form id="consult-form" action="https://www.truelegacyhomes.com/schedule-consult/" method="get" class="space-y-4">
-            <!-- Hidden tracking fields for Salesforce -->
+          <form id="consult-form" class="space-y-4">
+            <!-- Hidden tracking fields -->
+            <input type="hidden" name="form_type" id="form_type" value="schedule-consult">
             <input type="hidden" name="channel" id="channel" value="">
             <input type="hidden" name="channeldrilldown1" id="channeldrilldown1" value="">
             <input type="hidden" name="channeldrilldown2" id="channeldrilldown2" value="">
             <input type="hidden" name="channeldrilldown3" id="channeldrilldown3" value="">
-            <input type="hidden" name="landingpage" id="landingpage" value="">
-            <input type="hidden" name="landingpagegroup" id="landingpagegroup" value="">
+            <input type="hidden" name="landing_page" id="landing_page" value="">
+            <input type="hidden" name="landing_page_group" id="landing_page_group" value="">
+            <input type="hidden" name="utm_source" id="utm_source" value="">
+            <input type="hidden" name="utm_medium" id="utm_medium" value="">
+            <input type="hidden" name="utm_campaign" id="utm_campaign" value="">
+            <input type="hidden" name="utm_term" id="utm_term" value="">
+            <input type="hidden" name="utm_content" id="utm_content" value="">
             
             <div class="grid grid-cols-2 gap-4">
               <div>
@@ -268,6 +274,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </form>
           
           <script>
+            // Supabase config
+            const SUPABASE_URL = 'https://inqbqchjxzvdvcslvskb.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlucWJxY2hqeHp2ZHZjc2x2c2tiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwNzA4NzEsImV4cCI6MjA4ODY0Njg3MX0.cqOtZQQOdSI9hwVxI8RSAMsgxI3hJsZ8ttzehJRKVgk';
+            
             // Show/hide property fields based on service selection
             const serviceSelect = document.getElementById('service');
             const propertyFields = document.getElementById('property-fields');
@@ -285,10 +295,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             serviceSelect.addEventListener('change', togglePropertyFields);
             togglePropertyFields(); // Run on load
             
-            // Populate tracking fields
+            // Populate tracking fields from URL params
             const urlParams = new URLSearchParams(window.location.search);
             document.getElementById('channel').value = urlParams.get('utm_source') || '';
-            document.getElementById('landingpage').value = window.location.pathname;
+            document.getElementById('landing_page').value = window.location.pathname;
+            document.getElementById('utm_source').value = urlParams.get('utm_source') || '';
+            document.getElementById('utm_medium').value = urlParams.get('utm_medium') || '';
+            document.getElementById('utm_campaign').value = urlParams.get('utm_campaign') || '';
+            document.getElementById('utm_term').value = urlParams.get('utm_term') || '';
+            document.getElementById('utm_content').value = urlParams.get('utm_content') || '';
+            
+            // Handle form submission
+            document.getElementById('consult-form').addEventListener('submit', async function(e) {
+              e.preventDefault();
+              
+              const submitBtn = this.querySelector('button[type="submit"]');
+              const originalText = submitBtn.textContent;
+              submitBtn.textContent = 'Sending...';
+              submitBtn.disabled = true;
+              
+              // Gather form data
+              const formData = {
+                form_type: document.getElementById('form_type').value,
+                first_name: document.getElementById('first_name').value,
+                last_name: document.getElementById('last_name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service_interest: document.getElementById('service').value,
+                city: document.getElementById('property_county')?.value || null,
+                zip_code: document.getElementById('property_zip')?.value || null,
+                channel: document.getElementById('channel').value || null,
+                channeldrilldown1: document.getElementById('channeldrilldown1').value || null,
+                channeldrilldown2: document.getElementById('channeldrilldown2').value || null,
+                channeldrilldown3: document.getElementById('channeldrilldown3').value || null,
+                landing_page: document.getElementById('landing_page').value || null,
+                landing_page_group: document.getElementById('landing_page_group').value || null,
+                utm_source: document.getElementById('utm_source').value || null,
+                utm_medium: document.getElementById('utm_medium').value || null,
+                utm_campaign: document.getElementById('utm_campaign').value || null,
+                utm_term: document.getElementById('utm_term').value || null,
+                utm_content: document.getElementById('utm_content').value || null,
+                metadata: {
+                  messaging_optin: document.getElementById('messaging_optin').checked,
+                  referrer: document.referrer,
+                  user_agent: navigator.userAgent
+                }
+              };
+              
+              try {
+                const response = await fetch(`${SUPABASE_URL}/rest/v1/form_submissions`, {
+                  method: 'POST',
+                  headers: {
+                    'apikey': SUPABASE_ANON_KEY,
+                    'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                    'Content-Type': 'application/json',
+                    'Prefer': 'return=minimal'
+                  },
+                  body: JSON.stringify(formData)
+                });
+                
+                if (response.ok) {
+                  // Success - redirect to thank you page or show message
+                  window.location.href = '/thank-you/';
+                } else {
+                  throw new Error('Form submission failed');
+                }
+              } catch (error) {
+                console.error('Error:', error);
+                alert('Something went wrong. Please call us at (619) 450-1702 or try again.');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+              }
+            });
           </script>
         </div>
       </div>
