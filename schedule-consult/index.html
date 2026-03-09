@@ -149,6 +149,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <input type="hidden" name="utm_term" id="utm_term" value="">
             <input type="hidden" name="utm_content" id="utm_content" value="">
             
+            <!-- Honeypot field - hidden from humans, bots fill it out -->
+            <div style="position: absolute; left: -9999px;" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label for="first_name" class="block text-base font-semibold mb-2">First Name *</label>
@@ -278,6 +284,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             const SUPABASE_URL = 'https://inqbqchjxzvdvcslvskb.supabase.co';
             const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlucWJxY2hqeHp2ZHZjc2x2c2tiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwNzA4NzEsImV4cCI6MjA4ODY0Njg3MX0.cqOtZQQOdSI9hwVxI8RSAMsgxI3hJsZ8ttzehJRKVgk';
             
+            // Spam protection: record page load time
+            const PAGE_LOAD_TIME = Date.now();
+            
             // Show/hide property fields based on service selection
             const serviceSelect = document.getElementById('service');
             const propertyFields = document.getElementById('property-fields');
@@ -308,6 +317,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             // Handle form submission
             document.getElementById('consult-form').addEventListener('submit', async function(e) {
               e.preventDefault();
+              
+              // Spam check 1: Honeypot field (bots fill this out)
+              if (document.getElementById('website').value) {
+                // Silently reject - don't tell bots they failed
+                window.location.href = '/thank-you/';
+                return;
+              }
+              
+              // Spam check 2: Time-based (reject if submitted in less than 3 seconds)
+              const timeElapsed = Date.now() - PAGE_LOAD_TIME;
+              if (timeElapsed < 3000) {
+                // Too fast - probably a bot
+                window.location.href = '/thank-you/';
+                return;
+              }
               
               const submitBtn = this.querySelector('button[type="submit"]');
               const originalText = submitBtn.textContent;
