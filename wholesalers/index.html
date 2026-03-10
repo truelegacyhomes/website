@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wholesaler Partners — True Legacy Homes</title>
+  
+  <!-- NOINDEX - Secret landing page -->
+  <meta name="robots" content="noindex, nofollow">
+  
+  <link rel="icon" href="/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #f8fafc; color: #1e293b; }
+
+    /* NAV */
+    nav { background: #1e293b; padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { color: #fff; font-size: 18px; font-weight: 800; letter-spacing: -0.3px; }
+    .nav-logo span { color: #38b5ad; }
+    .nav-link { color: rgba(255,255,255,0.7); font-size: 13px; text-decoration: none; transition: color 0.2s; }
+    .nav-link:hover { color: #fff; }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, #1e293b 0%, #0f172a 60%, #1e293b 100%); padding: 80px 40px 72px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 70% 50%, rgba(56,181,173,0.08) 0%, transparent 60%); pointer-events: none; }
+    .hero-eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #38b5ad; margin-bottom: 16px; }
+    .hero h1 { font-size: 52px; font-weight: 900; color: #fff; line-height: 1.05; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .hero h1 span { color: #38b5ad; }
+    .hero p { font-size: 18px; color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto 36px; line-height: 1.6; }
+    .hero-pills { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
+    .pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 6px 16px; font-size: 13px; color: #fff; }
+    .btn-primary { display: inline-block; background: #38b5ad; color: #fff; font-weight: 700; font-size: 16px; padding: 16px 36px; border-radius: 6px; text-decoration: none; letter-spacing: 0.3px; transition: all 0.2s; }
+    .btn-primary:hover { background: #2d9e96; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(56,181,173,0.3); }
+    .btn-secondary { display: inline-block; border: 2px solid rgba(255,255,255,0.4); color: #fff; font-weight: 600; font-size: 15px; padding: 14px 28px; border-radius: 6px; text-decoration: none; margin-left: 12px; transition: all 0.2s; }
+    .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+    /* CREDIBILITY BAR */
+    .cred-bar { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 20px 40px; display: flex; gap: 0; justify-content: center; flex-wrap: wrap; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .cred-item { padding: 8px 32px; border-right: 1px solid #e5e7eb; text-align: center; }
+    .cred-item:last-child { border-right: none; }
+    .cred-num { font-size: 28px; font-weight: 900; color: #1e293b; line-height: 1; }
+    .cred-label { font-size: 12px; color: #9ca3af; margin-top: 3px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* SECTIONS */
+    .section { padding: 72px 40px; }
+    .section.alt { background: #fff; }
+    .section-inner { max-width: 960px; margin: 0 auto; }
+    .section-eyebrow { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #38b5ad; margin-bottom: 10px; }
+    .section-title { font-size: 36px; font-weight: 900; color: #1e293b; margin-bottom: 14px; line-height: 1.15; }
+    .section-sub { font-size: 16px; color: #6b7280; max-width: 560px; line-height: 1.6; margin-bottom: 40px; }
+
+    /* BUY BOX */
+    .buybox-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .buybox-item { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 16px; display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: #1f2937; }
+    .buybox-check { width: 22px; height: 22px; background: #38b5ad; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .buybox-check svg { width: 12px; height: 12px; color: #fff; }
+    .buybox-highlight { background: #1e293b; color: #fff; border-color: #1e293b; grid-column: span 3; justify-content: center; font-size: 16px; }
+    .buybox-highlight .buybox-check { background: #38b5ad; }
+
+    /* WHY TLH */
+    .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .why-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 24px; border-left: 4px solid #38b5ad; }
+    .why-icon { width: 40px; height: 40px; background: #38b5ad; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+    .why-icon svg { width: 20px; height: 20px; color: #fff; }
+    .why-title { font-size: 16px; font-weight: 800; color: #1e293b; margin-bottom: 8px; }
+    .why-body { font-size: 14px; color: #6b7280; line-height: 1.6; }
+
+    /* TERMS */
+    .terms-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .term-card { background: #1e293b; border-radius: 10px; padding: 24px 20px; text-align: center; }
+    .term-icon { width: 48px; height: 48px; background: rgba(56,181,173,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+    .term-icon svg { width: 24px; height: 24px; color: #38b5ad; }
+    .term-title { font-size: 15px; font-weight: 800; color: #fff; margin-bottom: 6px; }
+    .term-body { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+
+    /* JAMISON */
+    .jamison-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 36px; display: flex; gap: 32px; align-items: center; box-shadow: 0 4px 16px rgba(30,41,59,0.08); max-width: 700px; margin: 0 auto; }
+    .jamison-avatar { width: 90px; height: 90px; border-radius: 50%; background: linear-gradient(135deg, #1e293b, #38b5ad); display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 900; color: #fff; flex-shrink: 0; }
+    .jamison-name { font-size: 22px; font-weight: 900; color: #1e293b; }
+    .jamison-title { font-size: 13px; color: #38b5ad; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+    .jamison-contact { display: flex; flex-direction: column; gap: 6px; }
+    .jamison-contact a { font-size: 15px; color: #1e293b; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+    .jamison-contact a:hover { color: #38b5ad; }
+    .contact-icon { width: 18px; height: 18px; color: #38b5ad; }
+
+    /* FORM */
+    .form-wrap { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 40px; max-width: 680px; margin: 0 auto; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+    .form-title { font-size: 22px; font-weight: 900; color: #1e293b; margin-bottom: 6px; }
+    .form-sub { font-size: 14px; color: #6b7280; margin-bottom: 28px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-row.full { grid-template-columns: 1fr; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    label { font-size: 12px; font-weight: 700; color: #374151; text-transform: uppercase; letter-spacing: 0.5px; }
+    input, textarea, select { border: 1px solid #d1d5db; border-radius: 6px; padding: 10px 14px; font-size: 14px; font-family: 'Inter', sans-serif; color: #1f2937; transition: border-color 0.2s; width: 100%; }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: #38b5ad; box-shadow: 0 0 0 3px rgba(56,181,173,0.1); }
+    textarea { min-height: 90px; resize: vertical; }
+    .form-submit { width: 100%; background: #1e293b; color: #fff; font-weight: 700; font-size: 16px; padding: 16px; border-radius: 6px; border: none; cursor: pointer; font-family: 'Inter', sans-serif; transition: background 0.2s; margin-top: 8px; }
+    .form-submit:hover { background: #0f172a; }
+    .form-submit:disabled { background: #9ca3af; cursor: not-allowed; }
+    .form-note { font-size: 12px; color: #9ca3af; text-align: center; margin-top: 12px; }
+    .form-success { display: none; text-align: center; padding: 40px; }
+    .form-success.show { display: block; }
+    .form-success svg { width: 64px; height: 64px; color: #38b5ad; margin-bottom: 16px; }
+    .form-success h3 { font-size: 24px; font-weight: 800; color: #1e293b; margin-bottom: 8px; }
+    .form-success p { color: #6b7280; }
+    .form-fields.hide { display: none; }
+
+    /* ZIPS */
+    .zip-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .zip-region-title { font-size: 14px; font-weight: 800; color: #1e293b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #38b5ad; display: flex; align-items: center; gap: 8px; }
+    .zip-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .zip-tag { background: rgba(56,181,173,0.1); color: #1e293b; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 4px; }
+
+    /* FOOTER */
+    footer { background: #1e293b; color: rgba(255,255,255,0.5); text-align: center; padding: 28px 40px; font-size: 13px; }
+    footer strong { color: #fff; }
+    footer a { color: #38b5ad; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .hero { padding: 60px 24px 56px; }
+      .hero h1 { font-size: 32px; }
+      .hero p { font-size: 16px; }
+      .btn-secondary { margin-left: 0; margin-top: 12px; display: block; }
+      .buybox-grid { grid-template-columns: 1fr 1fr; }
+      .buybox-highlight { grid-column: span 2; }
+      .why-grid, .terms-grid, .zip-cols { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .jamison-card { flex-direction: column; text-align: center; padding: 24px; }
+      .jamison-contact { align-items: center; }
+      .cred-bar { flex-direction: column; }
+      .cred-item { border-right: none; border-bottom: 1px solid #e5e7eb; width: 100%; padding: 16px; }
+      .cred-item:last-child { border-bottom: none; }
+      .section { padding: 48px 24px; }
+      nav { padding: 14px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">True <span>Legacy</span> Homes</div>
+  <a href="https://truelegacyhomes.com" class="nav-link">truelegacyhomes.com</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">Wholesaler Partner Program</div>
+  <h1>We close on the deals<br><span>others pass on.</span></h1>
+  <p>Cash buyer for estate and life-transition properties in San Diego and Orange County. $800K–$4M. Any condition. Contents handled.</p>
+  <div class="hero-pills">
+    <div class="pill">$800K – $4M buy box</div>
+    <div class="pill">Any condition</div>
+    <div class="pill">SD + OC</div>
+    <div class="pill">Off-market or on-market</div>
+    <div class="pill">Fast close</div>
+  </div>
+  <a href="#submit" class="btn-primary">Submit a Deal</a>
+  <a href="#jamison" class="btn-secondary">Talk to Jamison</a>
+</section>
+
+<!-- CREDIBILITY BAR -->
+<div class="cred-bar">
+  <div class="cred-item"><div class="cred-num">150</div><div class="cred-label">Homes Purchased 2024</div></div>
+  <div class="cred-item"><div class="cred-num">200+</div><div class="cred-label">Estate Sales Managed</div></div>
+  <div class="cred-item"><div class="cred-num">404%</div><div class="cred-label">Revenue Growth 2020–2024</div></div>
+  <div class="cred-item"><div class="cred-num">$4M</div><div class="cred-label">Top of Buy Box</div></div>
+</div>
+
+<!-- BUY BOX -->
+<section class="section alt" id="buybox">
+  <div class="section-inner">
+    <div class="section-eyebrow">Our Buy Box</div>
+    <div class="section-title">We like to say yes.</div>
+    <div class="section-sub">If your deal has complications that scare off other buyers — that's where we shine. Estate properties are our specialty.</div>
+    <div class="buybox-grid">
+      <div class="buybox-item"><div class="buybox-check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>Foundation Issues</div>
+      <div class="buybox-item"><div class="buybox-check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>Permitting Issues</div>
+      <div class="buybox-item"><div class="buybox-check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>Water Intrusion</div>
+      <div class="buybox-item"><div class="buybox-check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>Zoning Issues</div>
+      <div class="buybox-item"><div class="buybox-check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>Cluttered / Hoarder Homes</div>
+      <div class="buybox-item"><div class="buybox-check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>Dilapidated &amp; Fixer Homes</div>
+      <div class="buybox-item"><div class="buybox-check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>Clean &amp; Dated Homes</div>
+      <div class="buybox-item"><div class="buybox-check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>Entry Level Homes</div>
+      <div class="buybox-item"><div class="buybox-check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>Off-Market OR On-Market</div>
+      <div class="buybox-item buybox-highlight"><div class="buybox-check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>Trade-Up Homes — $800K up to $4M</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY TLH -->
+<section class="section" id="why">
+  <div class="section-inner">
+    <div class="section-eyebrow">Why True Legacy Homes</div>
+    <div class="section-title">The partner for complicated deals.</div>
+    <div class="section-sub">We're not another cash buyer. We're the buyer that solves the problem other buyers can't.</div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
+        <div class="why-title">Estate Sale Expertise — Contents Handled</div>
+        <div class="why-body">Most cash buyers walk when a home is full of belongings. Our estate sale arm handles the contents challenge, which unlocks deals others won't touch. That's your edge when you bring us a deal.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+        <div class="why-title">Speed You Can Count On</div>
+        <div class="why-body">You're on a contract clock. We move fast. Cash, no financing contingencies, no last-minute re-trades. When we say we're in, we're in.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div>
+        <div class="why-title">We Are Not a Wholesaler</div>
+        <div class="why-body">We're the end buyer. We don't compete with you, we close with you. Bring us a deal and you get paid — simple, clean, no runaround.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
+        <div class="why-title">Flexible Transaction Structure</div>
+        <div class="why-body">All compensation structures negotiable. We can pay all fees. Referral structures welcome. We're here to make the deal work, not blow it up over structure.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TERMS -->
+<section class="section alt" id="terms">
+  <div class="section-inner">
+    <div class="section-eyebrow">Transaction Terms</div>
+    <div class="section-title">The nitty gritty.</div>
+    <div class="section-sub">We've built our process around making deals close — not fall apart.</div>
+    <div class="terms-grid">
+      <div class="term-card">
+        <div class="term-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <div class="term-title">Cash Advances</div>
+        <div class="term-body">Available on select deals to help move things forward</div>
+      </div>
+      <div class="term-card">
+        <div class="term-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <div class="term-title">Quick Close</div>
+        <div class="term-body">We close fast. No financing delays, no long escrows</div>
+      </div>
+      <div class="term-card">
+        <div class="term-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+        <div class="term-title">Flexible Timelines</div>
+        <div class="term-body">We work around the seller's needs, not just ours</div>
+      </div>
+      <div class="term-card">
+        <div class="term-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
+        <div class="term-title">Holdbacks up to 29 Days</div>
+        <div class="term-body">For estate properties that need time to clear contents</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JAMISON -->
+<section class="section" id="jamison">
+  <div class="section-inner" style="text-align:center;">
+    <div class="section-eyebrow">Your Direct Contact</div>
+    <div class="section-title">No 1-800 numbers. No runaround.</div>
+    <div class="section-sub" style="margin:0 auto 36px;">Call or text Jamison directly. He knows the buy box, he makes decisions, and he'll give you a straight answer.</div>
+    <div class="jamison-card">
+      <div class="jamison-avatar">JL</div>
+      <div>
+        <div class="jamison-name">Jamison Luther</div>
+        <div class="jamison-title">Director of Real Estate Investments</div>
+        <div class="jamison-contact">
+          <a href="tel:9492785670"><svg class="contact-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg> 949.278.5670</a>
+          <a href="mailto:jamison.luther@truelegacyhomes.com"><svg class="contact-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> jamison.luther@truelegacyhomes.com</a>
+          <a href="https://truelegacyhomes.com"><svg class="contact-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg> truelegacyhomes.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEAL SUBMISSION FORM -->
+<section class="section alt" id="submit">
+  <div class="section-inner">
+    <div style="text-align:center; margin-bottom:36px;">
+      <div class="section-eyebrow">Submit a Deal</div>
+      <div class="section-title">Have a property that fits?</div>
+      <div class="section-sub" style="margin:0 auto;">Fill this out and Jamison will get back to you within one business day. No fluff, just a straight answer on whether we're in.</div>
+    </div>
+    <div class="form-wrap">
+      <div class="form-success" id="formSuccess">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <h3>Deal Submitted!</h3>
+        <p>Jamison will review and get back to you within one business day.</p>
+      </div>
+      <div class="form-fields" id="formFields">
+        <div class="form-title">Deal Submission</div>
+        <div class="form-sub">Tell us about the property. The messier the better.</div>
+        <form id="dealForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Your Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="949.555.0100" required>
+            </div>
+          </div>
+          <div class="form-row full">
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required>
+            </div>
+          </div>
+          <div class="form-row full">
+            <div class="form-group">
+              <label for="property_address">Property Address</label>
+              <input type="text" id="property_address" name="property_address" placeholder="123 Main St, Newport Beach, CA 92657" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="asking_price">Asking Price</label>
+              <input type="text" id="asking_price" name="asking_price" placeholder="$1,200,000">
+            </div>
+            <div class="form-group">
+              <label for="condition">Property Condition</label>
+              <select id="condition" name="condition">
+                <option value="">Select condition</option>
+                <option value="Move-in ready / dated">Move-in ready / dated</option>
+                <option value="Minor fixer">Minor fixer</option>
+                <option value="Major fixer">Major fixer</option>
+                <option value="Hoarder / cluttered">Hoarder / cluttered</option>
+                <option value="Foundation / structural issues">Foundation / structural issues</option>
+                <option value="Permitting / title issues">Permitting / title issues</option>
+                <option value="Other">Other — see notes</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row full">
+            <div class="form-group">
+              <label for="notes">Notes — tell us what makes this deal complicated</label>
+              <textarea id="notes" name="notes" placeholder="Estate property, full of belongings, family wants quick close..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="form-submit" id="submitBtn">Submit Deal to Jamison →</button>
+          <div class="form-note">Or call/text directly: <strong>949.278.5670</strong></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TARGET ZIPS -->
+<section class="section" id="areas">
+  <div class="section-inner">
+    <div class="section-eyebrow">Target Areas</div>
+    <div class="section-title">Where we buy.</div>
+    <div class="section-sub">Focused on San Diego and Orange County's highest-value zip codes.</div>
+    <div class="zip-cols">
+      <div>
+        <div class="zip-region-title"><svg style="width:20px;height:20px;color:#f97316;" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> Orange County</div>
+        <div class="zip-list">
+          <span class="zip-tag">92657 Newport Beach</span>
+          <span class="zip-tag">92625 Corona del Mar</span>
+          <span class="zip-tag">92660 Newport Beach</span>
+          <span class="zip-tag">92603 Irvine</span>
+          <span class="zip-tag">92629 Dana Point</span>
+          <span class="zip-tag">92672 San Clemente</span>
+          <span class="zip-tag">92674 San Clemente</span>
+          <span class="zip-tag">92626 Costa Mesa</span>
+          <span class="zip-tag">92627 Costa Mesa</span>
+        </div>
+      </div>
+      <div>
+        <div class="zip-region-title"><svg style="width:20px;height:20px;color:#38b5ad;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg> San Diego</div>
+        <div class="zip-list">
+          <span class="zip-tag">92118 Coronado</span>
+          <span class="zip-tag">92075 Solana Beach</span>
+          <span class="zip-tag">92037 La Jolla</span>
+          <span class="zip-tag">92014 Del Mar</span>
+          <span class="zip-tag">92109 Pacific Beach</span>
+          <span class="zip-tag">92106 Point Loma</span>
+          <span class="zip-tag">92007 Cardiff</span>
+          <span class="zip-tag">92024 Encinitas</span>
+          <span class="zip-tag">92107 Ocean Beach</span>
+          <span class="zip-tag">92008 Carlsbad</span>
+          <span class="zip-tag">92130 Carmel Valley</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>True Legacy Homes</strong> · 15375 Barranca Pkwy., Suite A-107, Irvine, CA 92618 · <a href="https://truelegacyhomes.com">truelegacyhomes.com</a><br>
+  <span style="margin-top:6px;display:block;">Jamison Luther, Director of Real Estate Investments · <a href="tel:9492785670">949.278.5670</a> · <a href="mailto:jamison.luther@truelegacyhomes.com">jamison.luther@truelegacyhomes.com</a></span>
+</footer>
+
+<script>
+// Google Sheets submission via Google Apps Script Web App
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+
+document.getElementById('dealForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const btn = document.getElementById('submitBtn');
+  const originalText = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+  
+  const formData = {
+    timestamp: new Date().toISOString(),
+    name: document.getElementById('name').value,
+    phone: document.getElementById('phone').value,
+    email: document.getElementById('email').value,
+    property_address: document.getElementById('property_address').value,
+    asking_price: document.getElementById('asking_price').value,
+    condition: document.getElementById('condition').value,
+    notes: document.getElementById('notes').value
+  };
+  
+  try {
+    // Submit to Google Sheets
+    await fetch(GOOGLE_SHEET_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+    
+    // Show success (we can't check response with no-cors, but it usually works)
+    document.getElementById('formFields').classList.add('hide');
+    document.getElementById('formSuccess').classList.add('show');
+    
+  } catch (error) {
+    console.error('Submission error:', error);
+    btn.disabled = false;
+    btn.textContent = originalText;
+    alert('Something went wrong. Please call Jamison directly at 949.278.5670');
+  }
+});
+</script>
+
+</body>
+</html>
