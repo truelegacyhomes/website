@@ -469,29 +469,48 @@ document.getElementById('dealForm').addEventListener('submit', async function(e)
   btn.disabled = true;
   btn.textContent = 'Submitting...';
   
-  // Build form data for URL-encoded submission (works better with Google Apps Script)
-  const formData = new FormData();
-  formData.append('timestamp', new Date().toISOString());
-  formData.append('name', name);
-  formData.append('phone', phone);
-  formData.append('email', email);
-  formData.append('property_address', propertyAddress);
-  formData.append('asking_price', askingPrice);
-  formData.append('condition', condition);
-  formData.append('closing_timeframe', closingTimeframe);
-  formData.append('notes', notes);
+  // Build URL params for submission
+  const params = new URLSearchParams();
+  params.append('timestamp', new Date().toISOString());
+  params.append('name', name);
+  params.append('phone', phone);
+  params.append('email', email);
+  params.append('property_address', propertyAddress);
+  params.append('asking_price', askingPrice);
+  params.append('condition', condition);
+  params.append('closing_timeframe', closingTimeframe);
+  params.append('notes', notes);
   
   try {
-    // Submit to Google Sheets using fetch with FormData
-    await fetch(GOOGLE_SHEET_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      body: formData
+    // Submit via iframe to avoid CORS (most reliable method)
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.name = 'form-submit-iframe';
+    document.body.appendChild(iframe);
+    
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = GOOGLE_SHEET_URL;
+    form.target = 'form-submit-iframe';
+    
+    params.forEach((value, key) => {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = key;
+      input.value = value;
+      form.appendChild(input);
     });
     
-    // Show success (we can't check response with no-cors, but it usually works)
-    document.getElementById('formFields').classList.add('hide');
-    document.getElementById('formSuccess').classList.add('show');
+    document.body.appendChild(form);
+    form.submit();
+    
+    // Clean up and show success after brief delay
+    setTimeout(() => {
+      document.body.removeChild(form);
+      document.body.removeChild(iframe);
+      document.getElementById('formFields').classList.add('hide');
+      document.getElementById('formSuccess').classList.add('show');
+    }, 1000);
     
   } catch (error) {
     console.error('Submission error:', error);
